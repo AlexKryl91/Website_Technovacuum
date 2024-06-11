@@ -1,9 +1,6 @@
 import { createRoot } from 'react-dom/client';
-import App from '@/components/App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { LazyAboutUs } from '@/pages/AboutUs/AboutUs.lazy';
-import { LazyContacts } from '@/pages/Contacts/Contacts.lazy';
-import { Suspense } from 'react';
+import { publicRoutes } from './router/router';
 
 const root = document.getElementById('root');
 
@@ -13,24 +10,6 @@ if (!root) {
 
 const container = createRoot(root);
 
-const router = createBrowserRouter([
-  { path: '/', element: <App /> },
-  {
-    path: '/about',
-    element: (
-      <Suspense fallback={'Loading...'}>
-        <LazyAboutUs />
-      </Suspense>
-    ),
-  },
-  {
-    path: '/shop',
-    element: (
-      <Suspense fallback={'Loading...'}>
-        <LazyContacts />
-      </Suspense>
-    ),
-  },
-]);
+const router = createBrowserRouter(publicRoutes);
 
 container.render(<RouterProvider router={router} />);

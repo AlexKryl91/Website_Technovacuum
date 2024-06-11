@@ -1,0 +1,18 @@
+.button-lang {
+  height: 30px;
+  padding: 0 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--color-tr-white);
+  background: transparent;
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--color-text-light);
+  }
+}
+
+.active-lng {
+  font-size: 16px;
+  color: var(--color-text-light);
+}

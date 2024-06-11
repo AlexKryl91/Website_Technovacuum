@@ -1,0 +1,32 @@
+{
+  "logo": { "maintext": "Техновакуум", "subtext": "Струйная техника" },
+  "menuMap": [
+    {
+      "id": 1,
+      "name": "Разработки и решения",
+      "content": [
+        { "id": 11, "name": "Разработки", "path": "/solutions" },
+        { "id": 12, "name": "Продукция и услуги", "path": "/products&services" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "О нас",
+      "content": [
+        { "id": 21, "name": "О компании", "path": "/about" },
+        { "id": 22, "name": "Внедрения", "path": "/implementations" },
+        { "id": 23, "name": "Наша команда", "path": "/team" },
+        { "id": 24, "name": "Публикации", "path": "/publications" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Контакты",
+      "content": [
+        { "id": 31, "name": "Контакты", "path": "/contacts" },
+        { "id": 32, "name": "Вакансии", "path": "/careers" }
+      ]
+    }
+  ],
+  "loginBtn": { "name": "Вход" }
+}

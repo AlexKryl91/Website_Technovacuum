@@ -1,0 +1,13 @@
+@import '@/styles/fonts';
+@import '@/styles/reset';
+@import '@/styles/variables';
+// @import '@/styles/extends';
+// @import './common/mixins';
+// @import './components/main';
+// @import './common/dynamic_styles';
+// @import './common/animations';
+// @import './common/media_queries';
+
+body {
+  background: var(--color-bg-default);
+}

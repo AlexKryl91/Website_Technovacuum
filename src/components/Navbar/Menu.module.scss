@@ -1,0 +1,12 @@
+@import '@/styles/extends.scss';
+
+.menu-list {
+  height: 100%;
+  margin-right: 50px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @extend %disable-user-select;
+  font-size: 16px;
+}

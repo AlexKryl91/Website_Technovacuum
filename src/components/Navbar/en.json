@@ -1,0 +1,36 @@
+{
+  "logo": { "maintext": "Technovacuum", "subtext": "Jet devices" },
+  "menuMap": [
+    {
+      "id": 1,
+      "name": "Solutions & Products",
+      "content": [
+        { "id": 11, "name": "Solutions", "path": "/solutions" },
+        {
+          "id": 12,
+          "name": "Products & Services",
+          "path": "/products&services"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "About Us",
+      "content": [
+        { "id": 21, "name": "Our Company", "path": "/about" },
+        { "id": 22, "name": "Implementations", "path": "/implementations" },
+        { "id": 23, "name": "Our Team", "path": "/team" },
+        { "id": 24, "name": "Publications", "path": "/publications" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Contacts",
+      "content": [
+        { "id": 31, "name": "Contacts", "path": "/contacts" },
+        { "id": 32, "name": "Careers", "path": "/careers" }
+      ]
+    }
+  ],
+  "loginBtn": { "name": "Login" }
+}

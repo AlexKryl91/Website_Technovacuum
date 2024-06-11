@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('@/assets/fonts/Roboto-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('@/assets/fonts/Roboto-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('@/assets/fonts/Roboto-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('@/assets/fonts/Roboto-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'micradi';
+  src: url('@/assets/fonts/micradi.woff2') format('woff2');
+  unicode-range: U+21-23, U+25-5F, U+61-7E, U+AB, U+BB, U+401, U+410-44F, U+451,
+    U+2013, U+2014, U+2018, U+2019, U+201C-201E, U+2026, U+20BD;
+}
+
+@font-face {
+  font-family: 'bankgothic';
+  src: url('@/assets/fonts/bankgothic_md.woff2') format('woff2');
+  unicode-range: U+21-23, U+25-5F, U+61-7E, U+AB, U+BB, U+401, U+410-44F, U+451,
+    U+2013, U+2014, U+2018, U+2019, U+201C-201E, U+2026, U+20BD;
+}
+
+@font-face {
+  font-family: 'hatten';
+  src: url('@/assets/fonts/hatten-192.woff2') format('woff2');
+  unicode-range: U+31, U+32, U+39;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('@/assets/fonts/montserrat-medium.woff2') format('woff2');
+  unicode-range: U+21-23, U+25-5F, U+61-7E, U+AB, U+BB, U+401, U+410-44F, U+451,
+    U+2013, U+2014, U+2018, U+2019, U+201C-201E, U+2026, U+20BD;
+}
