@@ -1,5 +1,4 @@
 import * as classes from './Navbar.module.scss';
-import Menu from './Menu';
 import Logo from './Logo';
 import LangSwitcher from './LangSwitcher';
 import LoginButton from './LoginButton';
@@ -7,6 +6,7 @@ import ruTextContent from './ru.json';
 import enTextContent from './en.json';
 import { useContext } from 'react';
 import { LangContext } from '@/context/context';
+import Menu from './Menu';
 
 const Navbar = () => {
   const { lang } = useContext(LangContext);

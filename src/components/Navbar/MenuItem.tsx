@@ -4,7 +4,7 @@ import * as classes from './MenuItem.module.scss';
 import { FC } from 'react';
 import { IMenuItem } from '@/types/types';
 
-const DropdownMenuItem: FC<IMenuItem> = (props) => {
+const MenuItem: FC<IMenuItem> = (props) => {
   return (
     <li className={classes['menu-item']}>
       {props.name}
@@ -24,4 +24,4 @@ const DropdownMenuItem: FC<IMenuItem> = (props) => {
   );
 };
 
-export default DropdownMenuItem;
+export default MenuItem;
