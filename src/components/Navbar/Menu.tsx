@@ -5,16 +5,13 @@ import MenuItem from '@/components/Navbar/MenuItem';
 
 const Menu: FC<IMenu> = ({ menu }) => {
   return (
-    <ul className={classes['menu-list']}>
-      {menu.map((item) => (
-        <MenuItem
-          key={item.id}
-          id={item.id}
-          name={item.name}
-          content={item.content}
-        />
-      ))}
-    </ul>
+    <nav className={classes.menu}>
+      <ul>
+        {menu.map((item) => (
+          <MenuItem key={item.id} {...item} />
+        ))}
+      </ul>
+    </nav>
   );
 };
 

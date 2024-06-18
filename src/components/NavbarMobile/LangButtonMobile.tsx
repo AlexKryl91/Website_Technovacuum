@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import * as classes from './LangButton.module.scss';
+import * as classes from './LangButtonMobile.module.scss';
 import { useContext } from 'react';
 import { LangContext } from '@/context/context';
 
@@ -7,7 +7,7 @@ type TLangButton = {
   name: string;
 };
 
-const LangButton: FC<TLangButton> = ({ name }) => {
+const LangButtonMobile: FC<TLangButton> = ({ name }) => {
   const { lang, setLang } = useContext(LangContext);
 
   const active = name === lang;
@@ -27,4 +27,4 @@ const LangButton: FC<TLangButton> = ({ name }) => {
   );
 };
 
-export default LangButton;
+export default LangButtonMobile;

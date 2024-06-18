@@ -11,6 +11,8 @@ const Homepage = () => {
       <h1 className={classes.h1}>Научные исследования</h1>
       <h1 className={classes.h1}>Новые технологии</h1>
       <h1 className={classes.h1}>Внедрения</h1>
+      <br />
+      {/* <div className={classes.loader}></div> */}
     </div>
   );
 };

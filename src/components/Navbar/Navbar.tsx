@@ -13,17 +13,17 @@ const Navbar = () => {
 
   const content = lang === 'en' ? enTextContent : ruTextContent;
 
-  const { logo, menuMap, loginBtn } = content;
+  const { logo, menu, login } = content;
 
   return (
     <header className={classes.header}>
       <div className={classes.container}>
-        <Logo maintext={logo.maintext} subtext={logo.subtext} />
-        <nav className={classes.menu}>
-          <Menu menu={menuMap} />
+        <Logo {...logo} />
+        <Menu menu={menu} />
+        <div className={classes.actions}>
           <LangSwitcher />
-          <LoginButton name={loginBtn.name} />
-        </nav>
+          <LoginButton {...login} />
+        </div>
       </div>
     </header>
   );

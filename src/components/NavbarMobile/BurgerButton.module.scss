@@ -1,0 +1,34 @@
+.burger-btn {
+  width: 26px;
+  height: 21px;
+  background: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  span {
+    width: 26px;
+    height: 3px;
+    background: var(--color-bg-white);
+    border-radius: var(--border-radius-small);
+    transition: all var(--transition-duration) ease-in-out;
+    opacity: 1;
+    transform-origin: left center;
+  }
+}
+
+.active span {
+  background: var(--color-orange-faded);
+
+  &:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  &:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  &:nth-child(3) {
+    transform: rotate(-45deg) translateY(0.5px);
+  }
+}

@@ -1,0 +1,21 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  border-bottom: 2px solid #56657d99;
+}
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  column-gap: 36px;
+}

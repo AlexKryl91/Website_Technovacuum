@@ -1,0 +1,13 @@
+.lang-btn {
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: var(--color-tr20-greyblue);
+  transition: all var(--transition-duration);
+
+  &.active {
+    background: var(--color-tr40-greyblue);
+  }
+}

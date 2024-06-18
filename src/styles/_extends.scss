@@ -4,3 +4,9 @@
   -moz-user-select: none;
   -ms-user-select: none;
 }
+
+%flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

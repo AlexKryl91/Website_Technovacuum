@@ -4,27 +4,8 @@
   align-items: center;
 }
 
-.button-lang {
+.vertical-line {
   height: 30px;
-  padding: 0 12px;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: var(--color-tr-white);
-  background: transparent;
-  transition: all 0.3s;
-
-  &:hover {
-    color: var(--color-text-light);
-  }
-
-  &-vl {
-    height: 30px;
-    width: 2px;
-    background: var(--color-tr-white);
-  }
-}
-
-.active-lng {
-  font-size: 16px;
-  color: var(--color-text-light);
+  width: 2px;
+  background: var(--color-tr40-white);
 }

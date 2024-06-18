@@ -1,0 +1,38 @@
+.container {
+  width: 100dvw;
+  height: 100dvh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: var(--color-bg-default);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 50px;
+
+  svg {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.loader {
+  width: calc(200px / cos(45deg));
+  height: 30px;
+  border-radius: var(--border-radius-small);
+  background: repeating-linear-gradient(
+      -45deg,
+      var(--color-bg-white) 0 30px,
+      transparent 0 46px
+    )
+    left/200% 100%;
+  animation: loading 2s infinite linear;
+}
+
+@keyframes loading {
+  100% {
+    background-position: right;
+  }
+}

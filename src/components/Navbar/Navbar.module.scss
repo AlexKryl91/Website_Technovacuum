@@ -1,31 +1,31 @@
-@import '@/styles/extends.scss';
-
 .header {
+  width: 100%;
   position: absolute;
   top: 0;
-  width: 100%;
-  height: 90px;
-  border-bottom: 2px solid #56657d99;
+  border-bottom: 2px solid var(--color-tr60-greyblue);
 }
 
 .container {
-  height: 100%;
   width: 100%;
-  max-width: 1280px;
-  margin: auto;
-  padding: 0 75px;
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: 50px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  column-gap: 20px;
 }
 
-.menu {
-  height: 100%;
+.actions {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  font-family: 'Roboto';
-  font-weight: 400;
-  color: var(--color-text-light);
+  column-gap: 36px;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    flex-wrap: wrap;
+    padding-top: 24px;
+    row-gap: 10px;
+  }
 }

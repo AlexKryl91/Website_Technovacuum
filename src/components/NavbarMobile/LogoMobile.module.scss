@@ -1,13 +1,13 @@
 .container {
-  height: 32px;
+  height: 20px;
   display: flex;
   flex-direction: row;
   overflow: hidden;
 
   svg {
-    margin-right: 15px;
-    width: 32px;
-    height: 32px;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
   }
 
   .text-content {
@@ -15,8 +15,8 @@
     color: var(--color-text-light);
 
     .title {
-      margin: -7px 0 2px 0;
-      font-size: 25px;
+      margin-top: -10px;
+      font-size: 15px;
       font-family: var(--font-family-logo-main);
       font-weight: 400;
       line-height: 28px;
@@ -25,9 +25,10 @@
     }
 
     .subtitle {
-      font-size: 10px;
+      margin-top: -4px;
+      font-size: 6px;
       font-family: var(--font-family-logo-sub);
-      letter-spacing: 0.38em;
+      letter-spacing: 2.3px;
       text-transform: uppercase;
     }
   }

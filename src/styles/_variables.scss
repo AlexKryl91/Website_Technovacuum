@@ -1,16 +1,38 @@
 :root {
-  //
+  // background colors
   --color-bg-default: #3e4654;
   --color-bg-white: #f9f9fa;
   --color-bg-greyishblue: #e5e8e9;
-  //
+  // main colors
   --color-text-light: #f9f9fa;
   --color-text-dark: #2b4450;
   --color-orange-bright: #f9a828;
+  --color-orange-faded: #dea149;
   --color-accent-1: #497285;
   // transparent colors
-  --color-tr-white: #f9f9fa66;
-  --color-tr-orange: rgba(249, 168, 40, 0.4);
-  //
-  --fonts-fallback: Arial, Helvetica, Verdana, Tahoma, sans-serif;
+  --color-tr20-white: rgba(249, 249, 250, 0.2);
+  --color-tr40-white: rgba(249, 249, 250, 0.4);
+  --color-tr40-orange: rgba(249, 168, 40, 0.4);
+  --color-tr20-greyblue: rgba(86, 101, 125, 0.2);
+  --color-tr40-greyblue: rgba(86, 101, 125, 0.4);
+  --color-tr60-greyblue: rgba(86, 101, 125, 0.6);
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  // fonts
+  --font-family-base: 'Roboto', Arial, Helvetica, Verdana, sans-serif;
+  --font-family-header: 'montserrat', Arial, Helvetica, Verdana, sans-serif;
+  --font-family-logo-main: 'bankgothic', Arial, Helvetica, Verdana, sans-serif;
+  --font-family-logo-sub: 'micradi', Arial, Helvetica, Verdana, sans-serif;
+  --font-family-date: 'hatten', Arial, Helvetica, Verdana, sans-serif;
+  // for components
+  --border-radius-large: 15px;
+  --border-radius-small: 5px;
+  --input-heigth: 46px;
+  --button-width: 160px;
+  --line-h: 1.25;
+  // for pages
+  --container-width: 1130px;
+  --container-padding-x: 75px;
+
+  // for effects
+  --transition-duration: 0.2s;
 }
