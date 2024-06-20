@@ -1,12 +1,5 @@
-import Loader from '@/components/Loader/Loader';
-
 const Solutions = () => {
-  return (
-    <div>
-      РАЗРАБОТКИ
-      <Loader />
-    </div>
-  );
+  return <div>РАЗРАБОТКИ</div>;
 };
 
 export default Solutions;

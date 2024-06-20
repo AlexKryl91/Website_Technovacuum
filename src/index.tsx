@@ -1,6 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { publicRoutes } from './router/router';
+import { publicRoutes } from '@/router/router';
+import Loader from '@/components/Loader/Loader';
 
 const root = document.getElementById('root');
 
@@ -12,4 +13,6 @@ const container = createRoot(root);
 
 const router = createBrowserRouter(publicRoutes);
 
-container.render(<RouterProvider router={router} />);
+container.render(
+  <RouterProvider router={router} fallbackElement={<Loader />} />
+);
