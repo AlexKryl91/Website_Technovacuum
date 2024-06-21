@@ -2,10 +2,7 @@ import { FC } from 'react';
 import * as classes from './LangButton.module.scss';
 import { useContext } from 'react';
 import { LangContext } from '@/context/context';
-
-type TLangButton = {
-  name: string;
-};
+import { TLangButton } from '@/types/types';
 
 const LangButton: FC<TLangButton> = ({ name }) => {
   const { lang, setLang } = useContext(LangContext);

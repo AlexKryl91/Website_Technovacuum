@@ -1,5 +1,5 @@
 {
-  "logo": { "title": "Technovacuum", "subtitle": "Jet devices" },
+  "logo": { "heading": "Technovacuum", "subheading": "Jet devices" },
   "menu": [
     {
       "id": 1,

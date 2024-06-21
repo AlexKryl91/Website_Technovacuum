@@ -1,0 +1,69 @@
+$stripe-shadow: 4px 4px 4px var(--color-shadow);
+
+$width-s: 9px;
+$width-m: 21px;
+$width-l: 30px;
+
+$space-1: 14px;
+$space-2: 20px;
+$space-3: 22px;
+
+.break-line {
+  position: relative;
+  width: 100%;
+  height: 52px;
+}
+
+.spacer {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background: var(--color-bg-white);
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: left bottom;
+  transform: skew(-45deg);
+
+  .stripe-s {
+    height: 100%;
+    width: 9px;
+    position: absolute;
+    right: calc(60% + $space-1 + $width-l + $space-2 + $width-m + $space-3);
+    top: 0;
+    background: var(--color-orange-bright);
+    box-shadow: $stripe-shadow;
+  }
+  .stripe-m {
+    height: 100%;
+    width: $width-m;
+    position: absolute;
+    right: calc(60% + $space-1 + $width-l + $space-2);
+    top: 0;
+    background: var(--color-orange-reddish);
+    box-shadow: $stripe-shadow;
+  }
+  .stripe-l {
+    height: 100%;
+    width: $width-l;
+    position: absolute;
+    top: 0;
+    right: calc(60% + $space-1);
+    background: var(--color-orange-faded);
+    box-shadow: $stripe-shadow;
+  }
+  .stripe-xl {
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--color-accent-1);
+    box-shadow: $stripe-shadow;
+  }
+}

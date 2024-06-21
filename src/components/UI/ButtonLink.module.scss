@@ -1,0 +1,37 @@
+.btn-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  color: var(--color-text-dark);
+  border-radius: var(--border-radius-small);
+  transition: all var(--transition-duration);
+}
+
+.small {
+  height: 40px;
+  width: 140px;
+  font-size: 16px;
+}
+
+.large {
+  height: 46px;
+  width: 160px;
+  font-size: 20px;
+}
+
+.light {
+  background: none;
+  color: var(--color-text-dark);
+
+  &:hover {
+    background: var(--color-bg-greyishblue);
+    color: var(--color-accent-1);
+  }
+}
+
+.dark {
+  background: var(--color-accent-3);
+  color: var(--color-text-light);
+}

@@ -1,9 +1,13 @@
 // App state
 
 // Navbar Interface
+export type TLangButton = {
+  name: 'en' | 'ru';
+};
+
 export interface ILogo {
-  title: string;
-  subtitle: string;
+  heading: string;
+  subheading: string;
 }
 
 interface IMenuItemContent {
@@ -38,4 +42,17 @@ export interface IBurgerMenu {
 export interface IBurgerButton {
   active: boolean;
   setActive: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+// UI Components
+
+export interface IButtonLink {
+  size: 'small' | 'large';
+  theme: 'light' | 'dark';
+  value: string;
+  path: string;
+}
+
+export interface IHorizontalBar {
+  spacer: boolean;
 }

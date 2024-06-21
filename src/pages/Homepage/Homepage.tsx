@@ -2,9 +2,11 @@ import * as classes from './Homepage.module.scss';
 import { useContext } from 'react';
 import { LangContext } from '@/context/context';
 import imgEjector from '@/assets/img/ejector_1.png';
-import IconModern from '@/assets/icons/L_modern.svg';
+import IconModern from '@/assets/icons/icon_modern.svg';
 import IconScience from '@/assets/icons/icon_science.svg';
 import IconExperience from '@/assets/icons/icon_experience.svg';
+import ButtonLink from '@/components/UI/ButtonLink';
+import HorizontalBar from '@/components/UI/HorizontalBar';
 
 const Homepage = () => {
   const { lang } = useContext(LangContext);
@@ -60,19 +62,52 @@ const Homepage = () => {
             <img src="" alt="" />
           </div>
           <div className={classes.points}>
-            {/* <div>ICON</div> */}
             <IconModern />
-            <div>
-              Современные технологичные решения для различных промышленных задач
+            <div className={classes['points-description']}>
+              <p className={classes.caption}>
+                Современные технологичные решения для различных промышленных
+                задач
+              </p>
+              <ButtonLink
+                size="small"
+                theme="light"
+                value="Подробнее >"
+                path="/solutions"
+              />
             </div>
             <IconScience />
-            <div>
-              Решения, подкреплённые научными исследованиями и испытаниями
+            <div className={classes['points-description']}>
+              <p className={classes.caption}>
+                Решения, подкреплённые научными исследованиями и испытаниями
+              </p>
+              <ButtonLink
+                size="small"
+                theme="light"
+                value="Подробнее >"
+                path="/about"
+              />
             </div>
             <IconExperience />
-            <div>Огромный опыт внедрений промышленных систем и установок</div>
+            <div className={classes['points-description']}>
+              <p className={classes.caption}>
+                Огромный опыт внедрений промышленных систем и установок
+              </p>
+              <ButtonLink
+                size="small"
+                theme="light"
+                value="Подробнее >"
+                path="/implementations"
+              />
+            </div>
           </div>
         </div>
+        {/* <div className={classes['advantage-break']}>
+          <HorizontalBar />
+        </div> */}
+      </section>
+      <section className={classes.offer}>
+        <HorizontalBar spacer={true} />
+        <h3 className={classes['section-header']}>Что мы предлагаем?</h3>
       </section>
     </main>
   );

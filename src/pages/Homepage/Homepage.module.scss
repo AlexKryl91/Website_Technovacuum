@@ -11,7 +11,6 @@
 }
 
 .section-header {
-  // background: seagreen;
   height: 154px;
   font-family: var(--font-family-header);
   font-size: 2.25rem;
@@ -148,7 +147,7 @@
 
 .advantage {
   margin-top: -50px;
-  min-height: 700px;
+  min-height: 670px;
   background: var(--color-bg-white);
   clip-path: var(--section-clippath-desktop);
 
@@ -156,7 +155,7 @@
     position: relative;
     width: 100%;
     max-width: 1280px;
-    padding: 0 75px 146px;
+    padding: 0 75px 116px;
     margin: auto;
 
     display: flex;
@@ -171,7 +170,6 @@
       width: 100%;
       max-width: 540px;
       height: 400px;
-      // background: orange;
 
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -180,11 +178,6 @@
       .mark {
         background: var(--color-bg-greyishblue);
         color: var(--color-accent-1);
-
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
 
         &:first-of-type {
           margin: 20px 20px 30px 30px;
@@ -198,7 +191,7 @@
 
         p:first-of-type {
           font-size: 48px;
-          font-weight: 600;
+          font-weight: 500;
           margin-bottom: 6px;
         }
         p:last-of-type {
@@ -213,12 +206,12 @@
         clip-path: var(--img-clippath);
       }
     }
+
     .points {
       margin: auto;
       width: 100%;
       max-width: 510px;
       height: 400px;
-      // background: blueviolet;
 
       display: grid;
       grid-template-columns: 22% 73%;
@@ -233,6 +226,24 @@
         width: auto;
         margin: auto;
       }
+
+      &-description {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+      }
+
+      .caption {
+        padding: 10px 0 5px;
+      }
     }
   }
+}
+
+.offer {
+  background: url('@/assets/img/homepage-bg-2-100.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
