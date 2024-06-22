@@ -44,6 +44,7 @@ const Homepage = () => {
           </div>
         </div>
       </section>
+
       <section className={classes.advantage}>
         <h3 className={classes['section-header'] + ` ${classes['dark']}`}>
           Почему именно мы?
@@ -101,13 +102,51 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        {/* <div className={classes['advantage-break']}>
-          <HorizontalBar />
-        </div> */}
       </section>
+
       <section className={classes.offer}>
         <HorizontalBar spacer={true} />
         <h3 className={classes['section-header']}>Что мы предлагаем?</h3>
+
+        <ul className={classes['offer-points']}>
+          <li className={classes['point-item']}>
+            <div className={classes['item-wrapper']}>
+              <img src="" alt="" />
+              <div className={classes['item-description']}>
+                <p className={classes.caption}>
+                  Наши разработки и технологические решения на основе
+                  вакуумсоздающих систем, струйных компрессоров или
+                  струйно-абсорбционных установок для различных промышленных
+                  задач
+                </p>
+                <ButtonLink
+                  size="small"
+                  theme="light"
+                  value="Подробнее >"
+                  path="/solutions"
+                />
+              </div>
+            </div>
+          </li>
+          <li className={classes['point-item']}>
+            <div className={classes['item-wrapper']}>
+              <p>
+                Услуги и работы по обследованию производств и установок,
+                моделированию процессов, технико-экономическому анализу,
+                разработке технического задания и базового проекта, и другие...
+              </p>
+            </div>
+          </li>
+          <li className={classes['point-item']}>
+            <div className={classes['item-wrapper']}>
+              <p>
+                Оптимальное внедрение нашей продукции при модернизации или
+                реконструкции установок под цели и задачи Клиента при общем
+                увеличении производительности и эффективности
+              </p>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
   );

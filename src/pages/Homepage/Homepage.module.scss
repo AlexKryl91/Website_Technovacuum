@@ -246,4 +246,50 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+
+  &-points {
+    position: relative;
+    width: 100%;
+
+    list-style: none;
+
+    .point-item {
+      background: var(--color-tr80-greyishblue);
+      margin-bottom: 20px;
+      color: var(--color-text-dark);
+      font-size: 20px;
+
+      .item-wrapper {
+        margin: auto;
+        padding: 0 75px;
+        max-width: 1280px;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px 100px;
+
+        img {
+          margin-top: -10px;
+          width: 270px;
+          height: 180px;
+          background: blue;
+          border-radius: var(--border-radius-large);
+          // clip-path: var(--img-clippath);
+        }
+
+        .item-description {
+          width: 100%;
+          max-width: 745px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: right;
+        }
+
+        .caption {
+          line-height: 23px;
+          padding: 32px 0 16px;
+        }
+      }
+    }
+  }
 }

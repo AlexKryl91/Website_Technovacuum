@@ -67,3 +67,22 @@ $space-3: 22px;
     box-shadow: $stripe-shadow;
   }
 }
+
+@supports (scroll-timeline: --full-page-scroll block) {
+  html {
+    scroll-timeline: --full-page-scroll block;
+  }
+
+  .stripe-xl {
+    animation: glide-1 linear;
+    scale: 0 1;
+    transform-origin: right bottom;
+    animation-timeline: --full-page-scroll;
+
+    @keyframes glide-1 {
+      to {
+        scale: 1 1;
+      }
+    }
+  }
+}
