@@ -23,6 +23,9 @@
   }
 }
 
+$side-spacing: 75px;
+$max-width: 1280px;
+
 .banner {
   height: 850px;
   position: relative;
@@ -107,8 +110,8 @@
     position: relative;
     width: 100%;
     height: 100%;
-    max-width: 1280px;
-    padding: 90px 75px 0;
+    max-width: $max-width;
+    padding: 90px $side-spacing 0;
     margin: auto;
   }
 
@@ -147,16 +150,16 @@
 
 .advantage {
   margin-top: -50px;
-  min-height: 670px;
+  padding-bottom: 20px;
   background: var(--color-bg-white);
   clip-path: var(--section-clippath-desktop);
 
   &-body {
     position: relative;
     width: 100%;
-    max-width: 1280px;
-    padding: 0 75px 116px;
-    margin: auto;
+    max-width: $max-width;
+    padding-inline: $side-spacing;
+    margin: 0 auto 116px;
 
     display: flex;
     flex-wrap: wrap;
@@ -242,34 +245,43 @@
 }
 
 .offer {
+  margin-top: -20px;
   background: url('@/assets/img/homepage-bg-2-100.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: center 5px;
 
   &-points {
     position: relative;
     width: 100%;
+    max-width: $max-width;
+    margin: 0 auto 120px;
 
     list-style: none;
 
     .point-item {
-      background: var(--color-tr80-greyishblue);
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--color-tr80-greyishblue) 6%,
+        var(--color-tr80-greyishblue) 94%,
+        transparent 100%
+      );
       color: var(--color-text-dark);
       font-size: 20px;
 
       .item-wrapper {
         margin: auto;
-        padding: 0 75px;
-        max-width: 1280px;
+        padding-inline: $side-spacing;
+        max-width: $max-width;
 
         display: flex;
         flex-wrap: wrap;
-        gap: 40px 100px;
+        gap: 10px 100px;
 
         img {
-          margin-top: -10px;
+          margin: -10px auto -10px;
           width: 270px;
           height: 180px;
           background: blue;
@@ -279,17 +291,117 @@
 
         .item-description {
           width: 100%;
-          max-width: 745px;
+          max-width: 750px;
+          margin: 0 auto 0;
+          padding-bottom: 10px;
+
           display: flex;
           flex-wrap: wrap;
-          justify-content: right;
+          justify-content: flex-end;
         }
 
         .caption {
           line-height: 23px;
-          padding: 32px 0 16px;
+          margin: 32px 0 10px;
         }
       }
     }
   }
+}
+
+.clients {
+  margin-top: -50px;
+  padding-bottom: 20px;
+  min-height: 500px;
+  background: var(--color-bg-white);
+  clip-path: var(--section-clippath-desktop);
+
+  &-body {
+    position: relative;
+    overflow: hidden;
+    width: calc(100% - $side-spacing * 2);
+    max-width: calc($max-width - $side-spacing * 2);
+    height: 260px;
+    margin-inline: auto;
+    padding-bottom: 10px;
+
+    display: flex;
+    flex-direction: row;
+
+    $card-gap: 20px;
+
+    column-gap: $card-gap;
+
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(transparent),
+      color-stop(20%, #000),
+      color-stop(80%, #000),
+      to(transparent)
+    );
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 20%,
+      #000 80%,
+      transparent 100%
+    );
+    mask-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(transparent),
+      color-stop(20%, #000),
+      color-stop(80%, #000),
+      to(transparent)
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 20%,
+      #000 80%,
+      transparent 100%
+    );
+
+    &:hover .cards-slide {
+      animation-play-state: paused;
+    }
+
+    //
+
+    .cards-slide {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      column-gap: $card-gap;
+      animation: slide 60s infinite linear;
+    }
+
+    .card {
+      width: 200px;
+      height: 250px;
+      background: #fff;
+      border-radius: var(--border-radius-large);
+      box-shadow: 4px 4px 4px var(--color-shadow);
+    }
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+.join {
+  margin-top: -20px;
+  background: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }

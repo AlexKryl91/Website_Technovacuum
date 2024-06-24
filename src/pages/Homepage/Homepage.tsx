@@ -11,6 +11,29 @@ import HorizontalBar from '@/components/UI/HorizontalBar';
 const Homepage = () => {
   const { lang } = useContext(LangContext);
 
+  const clients = [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+  ];
+
   return (
     <main className={classes.main}>
       <section className={classes.banner}>
@@ -51,7 +74,7 @@ const Homepage = () => {
         </h3>
         <div className={classes['advantage-body']}>
           <div className={classes.illustration}>
-            <img src="" alt="" />
+            <img src="" alt="Фото воторой ступени вакуумсоздающей системы" />
             <div className={classes.mark}>
               <p>60+</p>
               <p>внедрений</p>
@@ -60,7 +83,10 @@ const Homepage = () => {
               <p>30+</p>
               <p>лет опыта</p>
             </div>
-            <img src="" alt="" />
+            <img
+              src=""
+              alt="Фото струйно-абсорбционной установки на нефтеналивной эстакаде"
+            />
           </div>
           <div className={classes.points}>
             <IconModern />
@@ -73,7 +99,7 @@ const Homepage = () => {
                 size="small"
                 theme="light"
                 value="Подробнее >"
-                path="/solutions"
+                path="/products&services"
               />
             </div>
             <IconScience />
@@ -130,23 +156,68 @@ const Homepage = () => {
           </li>
           <li className={classes['point-item']}>
             <div className={classes['item-wrapper']}>
-              <p>
-                Услуги и работы по обследованию производств и установок,
-                моделированию процессов, технико-экономическому анализу,
-                разработке технического задания и базового проекта, и другие...
-              </p>
+              <img src="" alt="" />
+              <div className={classes['item-description']}>
+                <p className={classes.caption}>
+                  Услуги и работы по обследованию производств и установок,
+                  моделированию процессов, технико-экономическому анализу,
+                  разработке технического задания и базового проекта, и прочее
+                </p>
+                <ButtonLink
+                  size="small"
+                  theme="light"
+                  value="Подробнее >"
+                  path="/products&services"
+                />
+              </div>
             </div>
           </li>
           <li className={classes['point-item']}>
             <div className={classes['item-wrapper']}>
-              <p>
-                Оптимальное внедрение нашей продукции при модернизации или
-                реконструкции установок под цели и задачи Клиента при общем
-                увеличении производительности и эффективности
-              </p>
+              <img src="" alt="" />
+              <div className={classes['item-description']}>
+                <p className={classes.caption}>
+                  Оптимальное внедрение нашей продукции при модернизации или
+                  реконструкции установок под цели и задачи Клиента при общем
+                  увеличении производительности и эффективности
+                </p>
+                <ButtonLink
+                  size="small"
+                  theme="light"
+                  value="Подробнее >"
+                  path="/implementations"
+                />
+              </div>
             </div>
           </li>
         </ul>
+      </section>
+
+      <section className={classes.clients}>
+        <h3 className={classes['section-header'] + ` ${classes['dark']}`}>
+          Наши клиенты
+        </h3>
+        <div className={classes['clients-body']}>
+          <div className={classes['cards-slide']}>
+            {clients.map((client) => (
+              <div className={classes.card}></div>
+            ))}
+          </div>
+          <div className={classes['cards-slide']}>
+            {clients.map((client) => (
+              <div className={classes.card}></div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* temp brake */}
+
+      <section className={classes.join}>
+        <HorizontalBar spacer={true} />
+        <h3 className={classes['section-header']}>
+          Стань частью нашей команды!
+        </h3>
       </section>
     </main>
   );
