@@ -26,7 +26,7 @@
 .banner {
   height: 850px;
   position: relative;
-  background: url('@/assets/img/homepage-bg-1.jpg');
+  background: url('@/assets/img/homepage_bg_1.jpg');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -93,15 +93,21 @@
 
     img {
       position: absolute;
-      width: min(52dvw, 660px);
+      width: min(40dvw, 520px);
       height: auto;
-      left: 190px;
-      bottom: 50px;
-      transform-origin: left bottom;
-      transform: rotate(-40deg);
+      left: 70px;
+      top: 130px;
+      transform-origin: right top;
       filter: drop-shadow(0 10px 4px var(--color-shadow));
 
-      @media screen and (max-width: 1100px) {
+      @media screen and (max-width: 1190px) {
+        width: 320px;
+        height: auto;
+        left: 180px;
+        top: 220px;
+      }
+
+      @media screen and (max-width: 1080px) {
         display: none;
       }
     }
@@ -203,7 +209,6 @@
       }
 
       img {
-        background: blue;
         border-radius: var(--border-radius-large);
         clip-path: var(--img-clippath);
       }
@@ -237,7 +242,7 @@
       }
 
       .caption {
-        padding: 10px 0 5px;
+        padding: 5px 0 5px;
       }
     }
   }
@@ -245,7 +250,7 @@
 
 .offer {
   margin-top: -20px;
-  background: url('@/assets/img/homepage-bg-2.jpg');
+  background: url('@/assets/img/homepage_bg_2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 5px;
@@ -277,15 +282,14 @@
 
         display: flex;
         flex-wrap: wrap;
-        gap: 10px 100px;
+        gap: 10px 80px;
 
         img {
           margin: -10px auto -10px;
           width: 270px;
           height: 180px;
-          background: blue;
+          box-shadow: 4px 4px 4px var(--color-shadow);
           border-radius: var(--border-radius-large);
-          // clip-path: var(--img-clippath);
         }
 
         .item-description {
@@ -367,14 +371,12 @@
       animation-play-state: paused;
     }
 
-    //
-
     .cards-slide {
       position: relative;
       display: flex;
       flex-direction: row;
       column-gap: $card-gap;
-      animation: slide 60s infinite linear;
+      animation: slide 120s infinite linear;
     }
 
     .card {
@@ -398,7 +400,7 @@
 
 .join {
   margin-top: -20px;
-  background: url('@/assets/img/homepage-bg-3.jpg');
+  background: url('@/assets/img/homepage_bg_3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 5px;
