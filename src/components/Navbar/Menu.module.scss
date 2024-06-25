@@ -1,18 +1,15 @@
+@import '@/styles/common/extends';
+
 .menu {
-  height: 88px;
+  height: calc(var(--desktop-navbar-height) - 2px);
 
   ul {
     height: 100%;
     list-style-type: none;
-    display: inline-flex;
-    align-items: center;
+    @extend %flex-a-center-row;
+    @extend %disable-user-select;
 
     font-size: 16px;
-
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
   }
 }
 

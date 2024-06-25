@@ -33,8 +33,11 @@
   --input-heigth: 46px;
   --line-h: 1.25;
   // for pages
-  --container-width: 1130px;
-  --container-padding-x: 75px;
+  --desktop-navbar-height: 90px;
+  --desktop-side-spacing: 75px;
+  --desktop-max-width: 1280px;
+  --mobile-navbar-height: 44px;
+  --mobile-side-spacing: 20px;
 
   // for effects
   --transition-duration: 0.2s;

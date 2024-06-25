@@ -7,6 +7,7 @@ import IconScience from '@/assets/icons/icon_science.svg';
 import IconExperience from '@/assets/icons/icon_experience.svg';
 import ButtonLink from '@/components/UI/ButtonLink';
 import HorizontalBar from '@/components/UI/HorizontalBar';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   const { lang } = useContext(LangContext);
@@ -211,13 +212,67 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* temp brake */}
-
       <section className={classes.join}>
         <HorizontalBar spacer={true} />
         <h3 className={classes['section-header']}>
           Стань частью нашей команды!
         </h3>
+        <div className={classes['text-bar']}>
+          <p className={classes['invite-text']}>
+            Если Вы хотите присоединиться к нашему коллективу, принять участие в
+            разработке и реализации новых технологий и найти воплощение своих
+            идей в металле – ознакомьтесь с открытыми вакансиями либо присылайте
+            Ваше резюме нам на почту!
+          </p>
+          <div className={classes['button-wrapper']}>
+            <ButtonLink
+              size="large"
+              theme="dark"
+              value="Вакансии"
+              path="/careers"
+            />
+            <ButtonLink
+              size="large"
+              theme="dark"
+              value="Контакты"
+              path="/contacts"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className={classes.feedback}>
+        <h3 className={classes['section-header'] + ` ${classes['dark']}`}>
+          Свяжитесь с нами
+        </h3>
+
+        <p className={classes['feedback-text']}>
+          Для получения более подробной информации от наших специалистов
+          заполните форму обратной связи. Вы также можете заполнить опросные
+          листы со спецификацией необходимого оборудования в личном кабинете
+          Пользователя, предварительно зарегистрировавшись на нашем сайте.
+        </p>
+        <div className={classes['form-field']}>
+          <form className={classes['feedback-form']}>
+            <input type="text" name="" id="" required />
+            <input type="text" name="" id="" />
+            <input type="tel" name="" id="" />
+            <input type="email" name="" id="" required />
+            <textarea name="" id=""></textarea>
+            <ButtonLink size="large" theme="dark" value="Отправить" path="/" />
+          </form>
+        </div>
+        <div className={classes['call-in']}>
+          <p className={classes['call-in-text']}>
+            Если Вы нуждаетесь в экологически чистых решениях, хотите
+            существенно снизить выбросы в окружающую среду, затраты энергии и
+            ресурсов, планируете строительство новых или модернизацию
+            существующих объектов...
+          </p>
+          <p className={classes['end-phrase']}>
+            <Link to={'/contacts'}>Обращайтесь к нам!</Link>
+          </p>
+        </div>
       </section>
     </main>
   );

@@ -16,16 +16,14 @@ const NavbarMobile = () => {
 
   return (
     <header className={classes.header}>
-      <div className={classes.container}>
-        <LogoMobile {...logo} />
-        <BurgerButton active={menuActive} setActive={setMenuActive} />
-        <BurgerMenu
-          active={menuActive}
-          setActive={setMenuActive}
-          menu={menu}
-          login={login}
-        />
-      </div>
+      <LogoMobile {...logo} />
+      <BurgerMenu
+        active={menuActive}
+        setActive={setMenuActive}
+        menu={menu}
+        login={login}
+      />
+      <BurgerButton active={menuActive} setActive={setMenuActive} />
     </header>
   );
 };

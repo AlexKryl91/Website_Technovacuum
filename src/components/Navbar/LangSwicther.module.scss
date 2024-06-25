@@ -1,7 +1,7 @@
+@import '@/styles/common/extends';
+
 .switcher {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  @extend %flex-a-center-row;
 }
 
 .vertical-line {

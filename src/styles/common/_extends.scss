@@ -5,8 +5,19 @@
   -ms-user-select: none;
 }
 
-%flex-row-center {
+%flex-a-center {
   display: flex;
-  flex-direction: row;
   align-items: center;
+}
+
+%flex-a-center-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+%flex-a-center-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

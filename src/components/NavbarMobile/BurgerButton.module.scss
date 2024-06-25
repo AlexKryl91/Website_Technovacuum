@@ -1,11 +1,15 @@
+@import '@/styles/common/visually_hidden';
+
 .burger-btn {
-  width: 26px;
-  height: 21px;
+  width: 44px;
+  height: 40px;
   background: none;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  row-gap: 6px;
 
   span {
     width: 26px;
@@ -18,17 +22,22 @@
   }
 }
 
-.active span {
-  background: var(--color-orange-faded);
+.active {
+  position: fixed;
+  right: var(--mobile-side-spacing);
 
-  &:nth-child(1) {
-    transform: rotate(45deg);
-  }
-  &:nth-child(2) {
-    width: 0%;
-    opacity: 0;
-  }
-  &:nth-child(3) {
-    transform: rotate(-45deg) translateY(0.5px);
+  span {
+    background: var(--color-orange-faded);
+
+    &:nth-child(1) {
+      transform: rotate(45deg);
+    }
+    &:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg) translateY(0.5px);
+    }
   }
 }

@@ -12,8 +12,9 @@ const App = () => {
 
   return (
     <LangContext.Provider value={{ lang, setLang }}>
-      <Outlet />
       {isMobile ? <NavbarMobile /> : <Navbar />}
+      <Outlet />
+      {isMobile ? 'MobileFooter' : 'DesktopFooter'}
     </LangContext.Provider>
   );
 };

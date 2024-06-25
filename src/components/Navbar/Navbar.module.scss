@@ -3,28 +3,31 @@
   position: absolute;
   top: 0;
   border-bottom: 2px solid var(--color-tr60-greyblue);
+  z-index: 1;
+}
+
+.container,
+.actions {
+  display: flex;
+  align-items: center;
 }
 
 .container {
   width: 100%;
-  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  max-width: var(--desktop-max-width);
+  padding-inline: var(--desktop-side-spacing);
   margin-inline: auto;
-  padding-inline: 50px;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   column-gap: 20px;
 }
 
 .actions {
-  display: flex;
-  align-items: center;
   column-gap: 36px;
 }
 
 @media (max-width: 1100px) {
   .container {
     flex-wrap: wrap;
-    padding-top: 15px;
+    padding: 15px 50px 0;
   }
 }

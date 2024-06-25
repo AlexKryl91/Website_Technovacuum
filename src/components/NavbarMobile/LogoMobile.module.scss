@@ -6,22 +6,25 @@
 
   svg {
     margin-right: 8px;
-    width: 20px;
-    height: 20px;
+
+    $icon-size: 20px;
+
+    width: $icon-size;
+    height: $icon-size;
   }
 
   .text-content {
     height: 100%;
     color: var(--color-text-light);
+    font-weight: 400;
+    text-transform: uppercase;
 
     .title {
       margin-top: -10px;
       font-size: 15px;
       font-family: var(--font-family-logo-main);
-      font-weight: 400;
       line-height: 28px;
       letter-spacing: -0.05em;
-      text-transform: uppercase;
     }
 
     .subtitle {
@@ -29,7 +32,6 @@
       font-size: 6px;
       font-family: var(--font-family-logo-sub);
       letter-spacing: 2.3px;
-      text-transform: uppercase;
     }
   }
 }
