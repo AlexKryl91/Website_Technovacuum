@@ -34,7 +34,8 @@ $space-3: 22px;
     height: 100%;
     width: 9px;
     position: absolute;
-    right: calc(60% + $space-1 + $width-l + $space-2 + $width-m + $space-3);
+    // right: calc(60% + $space-1 + $width-l + $space-2 + $width-m + $space-3);
+    right: -100px;
     top: 0;
     background: var(--color-orange-bright);
     box-shadow: $stripe-shadow;
@@ -43,7 +44,8 @@ $space-3: 22px;
     height: 100%;
     width: $width-m;
     position: absolute;
-    right: calc(60% + $space-1 + $width-l + $space-2);
+    right: -100px;
+    // right: calc(60% + $space-1 + $width-l + $space-2);
     top: 0;
     background: var(--color-orange-reddish);
     box-shadow: $stripe-shadow;
@@ -53,7 +55,8 @@ $space-3: 22px;
     width: $width-l;
     position: absolute;
     top: 0;
-    right: calc(60% + $space-1);
+    right: -100px;
+    // right: calc(60% + $space-1);
     background: var(--color-orange-faded);
     box-shadow: $stripe-shadow;
   }
@@ -68,20 +71,64 @@ $space-3: 22px;
   }
 }
 
-@supports (scroll-timeline: --full-page-scroll block) {
-  html {
-    scroll-timeline: --full-page-scroll block;
+@supports (animation-timeline: view()) {
+  section {
+    view-timeline: --section-view;
   }
 
   .stripe-xl {
-    animation: glide-1 linear;
+    animation: slide-xl ease-out forwards;
     scale: 0 1;
     transform-origin: right bottom;
-    animation-timeline: --full-page-scroll;
+    animation-timeline: --section-view;
+    animation-range-start: 15dvh;
+    animation-range-end: 20dvh;
 
-    @keyframes glide-1 {
+    @keyframes slide-xl {
       to {
         scale: 1 1;
+      }
+    }
+  }
+
+  .stripe-l {
+    animation: slide-l ease-out forwards;
+    transform-origin: right bottom;
+    animation-timeline: --section-view;
+    animation-range-start: 15dvh;
+    animation-range-end: 30dvh;
+
+    @keyframes slide-l {
+      to {
+        right: calc(60% + $space-1);
+      }
+    }
+  }
+
+  .stripe-m {
+    animation: slide-m ease-out forwards;
+    transform-origin: right bottom;
+    animation-timeline: --section-view;
+    animation-range-start: 20dvh;
+    animation-range-end: 35dvh;
+
+    @keyframes slide-m {
+      to {
+        right: calc(60% + $space-1 + $width-l + $space-2);
+      }
+    }
+  }
+
+  .stripe-s {
+    animation: slide-s ease-out forwards;
+    transform-origin: right bottom;
+    animation-timeline: --section-view;
+    animation-range-start: 25dvh;
+    animation-range-end: 40dvh;
+
+    @keyframes slide-s {
+      to {
+        right: calc(60% + $space-1 + $width-l + $space-2 + $width-m + $space-3);
       }
     }
   }
