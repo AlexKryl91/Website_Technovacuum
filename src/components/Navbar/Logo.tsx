@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import LogoIcon from '@/assets/Logo_32x32.svg';
+import LogoIcon from '@/assets/logos/logo.svg';
 import * as classes from './Logo.module.scss';
 import { FC } from 'react';
 import { ILogo } from '@/types/types';

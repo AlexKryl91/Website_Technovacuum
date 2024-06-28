@@ -1,5 +1,5 @@
 import * as classes from './Loader.module.scss';
-import LogoIcon from '@/assets/Logo_32x32.svg';
+import LogoIcon from '@/assets/logos/logo.svg';
 
 const Loader = () => {
   return (

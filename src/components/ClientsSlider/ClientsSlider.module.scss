@@ -21,8 +21,8 @@
     box-shadow: 4px 4px 4px var(--color-shadow);
   }
 
-  img {
-    width: 160px;
+  svg {
+    width: 100%;
     height: auto;
 
     -webkit-filter: grayscale(100%);
@@ -30,7 +30,7 @@
     transition: all var(--transition-duration);
   }
 
-  &:hover img {
+  &:hover svg {
     -webkit-filter: none;
     filter: none;
     scale: 1.2;

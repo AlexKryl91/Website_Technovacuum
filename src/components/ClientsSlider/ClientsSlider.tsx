@@ -1,146 +1,160 @@
 import * as classes from './ClientsSlider.module.scss';
 
-import LogoAnpz from '@/assets/img/company_MONO_anpz.jpg';
-import LogoEssar from '@/assets/img/company_MONO_essar.jpg';
-import LogoGPN from '@/assets/img/company_MONO_gazpromneft.jpg';
-import LogoHyundai from '@/assets/img/company_MONO_hyundai.jpg';
-import LogoKMG from '@/assets/img/company_MONO_kazmunaigaz.jpg';
-import LogoLukoil from '@/assets/img/company_MONO_lukoil.jpg';
-import LogoNHS from '@/assets/img/company_MONO_neftehimservis.jpg';
-import LogoOrlen from '@/assets/img/company_MONO_orlen.jpg';
-import LogoRosneft from '@/assets/img/company_MONO_rosneft.jpg';
-import LogoSchAz from '@/assets/img/company_MONO_schekinoazot.jpg';
-import LogoSibur from '@/assets/img/company_MONO_sibur.jpg';
-import LogoSlavNeft from '@/assets/img/company_MONO_slavneft.jpg';
-import LogoSlEco from '@/assets/img/company_MONO_slavyansk-eco.jpg';
-import LogoSOCAR from '@/assets/img/company_MONO_socar.jpg';
-import LogoTAIF from '@/assets/img/company_MONO_taif-nk.jpg';
-import LogoTANECO from '@/assets/img/company_MONO_taneco.jpg';
-import LogoTatNeft from '@/assets/img/company_MONO_tatneft.jpg';
-import LogoTurk from '@/assets/img/company_MONO_turkmenistan.jpg';
-import LogoTransNeft from '@/assets/img/company_MONO_transneft.jpg';
-import LogoNNK from '@/assets/img/company_MONO_nnk.jpg';
+import IconCompanyANPZ from '@/assets/logos/company_anpz.svg';
+import IconCompanyBashneft from '@/assets/logos/company_bashneft.svg';
+import IconCompanyEssar from '@/assets/logos/company_essar.svg';
+import IconCompanyGPN from '@/assets/logos/company_gazpromneft.svg';
+import IconCompanyHyundai from '@/assets/logos/company_hyundai.svg';
+import IconCompanyKMG from '@/assets/logos/company_kazmunaigaz.svg';
+import IconCompanyLukoil from '@/assets/logos/company_lukoil.svg';
+import IconCompanyNHS from '@/assets/logos/company_neftehimservis.svg';
+import IconCompanyNNK from '@/assets/logos/company_nnk.svg';
+import IconCompanyNZNP from '@/assets/logos/company_nznp.svg';
+import IconCompanyOrlen from '@/assets/logos/company_orlen.svg';
+import IconCompanyRosneft from '@/assets/logos/company_rosneft.svg';
+import IconCompanySchAz from '@/assets/logos/company_schekinoazot.svg';
+import IconCompanySibur from '@/assets/logos/company_sibur.svg';
+import IconCompanySlavNeft from '@/assets/logos/company_slavneft.svg';
+import IconCompanySlavEco from '@/assets/logos/company_slavyansk-eco.svg';
+import IconCompanySOCAR from '@/assets/logos/company_socar.svg';
+import IconCompanyTAIF from '@/assets/logos/company_taif-nk.svg';
+import IconCompanyTANECO from '@/assets/logos/company_taneco.svg';
+import IconCompanyTatNeft from '@/assets/logos/company_tatneft.svg';
+import IconCompanyTNGIZT from '@/assets/logos/company_tngizt.svg';
+import IconCompanyTransNeft from '@/assets/logos/company_transneft.svg';
 
 const ClientsSlider = () => {
   const clients = [
     {
       id: 1,
       name: 'Афипский НПЗ',
-      img: LogoAnpz,
+      icon: IconCompanyANPZ,
       href: 'https://www.afipnpz.ru',
     },
     {
       id: 2,
-      name: 'Essar',
-      img: LogoEssar,
-      href: 'https://www.essar.com',
+      name: 'Башнефть',
+      icon: IconCompanyBashneft,
+      href: 'https://bashneft.ru',
     },
     {
       id: 3,
-      name: 'Газпромнефть',
-      img: LogoGPN,
-      href: 'https://www.gazprom-neft.ru',
+      name: 'Essar',
+      icon: IconCompanyEssar,
+      href: 'https://www.essar.com',
     },
     {
       id: 4,
-      name: 'Hyundai Engineering',
-      img: LogoHyundai,
-      href: 'https://en.hdec.kr/en/main.aspx',
+      name: 'Газпромнефть',
+      icon: IconCompanyGPN,
+      href: 'https://www.gazprom-neft.ru',
     },
     {
       id: 5,
-      name: 'КазМунайГаз',
-      img: LogoKMG,
-      href: 'https://www.kmg.kz',
+      name: 'Hyundai Engineering',
+      icon: IconCompanyHyundai,
+      href: 'https://en.hdec.kr/en/main.aspx',
     },
     {
       id: 6,
-      name: 'Лукойл',
-      img: LogoLukoil,
-      href: 'https://lukoil.ru',
+      name: 'КазМунайГаз',
+      icon: IconCompanyKMG,
+      href: 'https://www.kmg.kz',
     },
     {
       id: 7,
-      name: 'НефтеХимСервис',
-      img: LogoNHS,
-      href: 'https://nhs-kuzbass.ru',
+      name: 'Лукойл',
+      icon: IconCompanyLukoil,
+      href: 'https://lukoil.ru',
     },
     {
       id: 8,
-      name: 'ННК',
-      img: LogoNNK,
-      href: 'https://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D0%B1%D0%B0%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BD%D0%B5%D1%84%D1%82%D0%B5%D0%BF%D0%B5%D1%80%D0%B5%D1%80%D0%B0%D0%B1%D0%B0%D1%82%D1%8B%D0%B2%D0%B0%D1%8E%D1%89%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4',
+      name: 'НефтеХимСервис',
+      icon: IconCompanyNHS,
+      href: 'https://nhs-kuzbass.ru',
     },
     {
       id: 9,
-      name: 'Orlen Lietuva',
-      img: LogoOrlen,
-      href: 'https://www.orlenlietuva.lt',
+      name: 'ННК',
+      icon: IconCompanyNNK,
+      href: 'https://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D0%B1%D0%B0%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BD%D0%B5%D1%84%D1%82%D0%B5%D0%BF%D0%B5%D1%80%D0%B5%D1%80%D0%B0%D0%B1%D0%B0%D1%82%D1%8B%D0%B2%D0%B0%D1%8E%D1%89%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4',
     },
     {
       id: 10,
-      name: 'Роснефть',
-      img: LogoRosneft,
-      href: 'https://www.rosneft.ru',
+      name: 'Новошахтинский завод нефтепродуктов',
+      icon: IconCompanyNZNP,
+      href: 'https://nznp.ru/',
     },
     {
       id: 11,
-      name: 'Щекиноазот',
-      img: LogoSchAz,
-      href: 'https://n-azot.ru',
+      name: 'Orlen Lietuva',
+      icon: IconCompanyOrlen,
+      href: 'https://www.orlenlietuva.lt',
     },
     {
       id: 12,
-      name: 'Сибур',
-      img: LogoSibur,
-      href: 'https://www.sibur.ru/ru',
+      name: 'Роснефть',
+      icon: IconCompanyRosneft,
+      href: 'https://www.rosneft.ru',
     },
     {
       id: 13,
-      name: 'Славнефть',
-      img: LogoSlavNeft,
-      href: 'https://www.slavneft.ru',
+      name: 'Щекиноазот',
+      icon: IconCompanySchAz,
+      href: 'https://n-azot.ru',
     },
     {
       id: 14,
-      name: 'Славянск ЭКО',
-      img: LogoSlEco,
-      href: 'https://slaveco.ru',
+      name: 'Сибур',
+      icon: IconCompanySibur,
+      href: 'https://www.sibur.ru/ru',
     },
     {
       id: 15,
-      name: 'SOCAR',
-      img: LogoSOCAR,
-      href: 'https://socar.com.ru',
+      name: 'Славнефть',
+      icon: IconCompanySlavNeft,
+      href: 'https://www.slavneft.ru',
     },
     {
       id: 16,
-      name: 'ТАИФ-НК',
-      img: LogoTAIF,
-      href: 'https://taifnk.ru',
+      name: 'Славянск ЭКО',
+      icon: IconCompanySlavEco,
+      href: 'https://slaveco.ru',
     },
     {
       id: 17,
-      name: 'TANECO',
-      img: LogoTANECO,
-      href: 'https://www.taneco.ru',
+      name: 'SOCAR',
+      icon: IconCompanySOCAR,
+      href: 'https://socar.com.ru',
     },
     {
       id: 18,
-      name: 'TATNEFT',
-      img: LogoTatNeft,
-      href: 'https://www.tatneft.ru',
+      name: 'ТАИФ-НК',
+      icon: IconCompanyTAIF,
+      href: 'https://taifnk.ru',
     },
     {
       id: 19,
-      name: 'TNGIZT',
-      img: LogoTurk,
-      href: 'https://tngizt.gov.tm',
+      name: 'TANECO',
+      icon: IconCompanyTANECO,
+      href: 'https://www.taneco.ru',
     },
     {
       id: 20,
+      name: 'TATNEFT',
+      icon: IconCompanyTatNeft,
+      href: 'https://www.tatneft.ru',
+    },
+    {
+      id: 21,
+      name: 'TNGIZT',
+      icon: IconCompanyTNGIZT,
+      href: 'https://tngizt.gov.tm',
+    },
+    {
+      id: 22,
       name: 'Транснефть',
-      img: LogoTransNeft,
+      icon: IconCompanyTransNeft,
       href: 'https://www.transneft.ru',
     },
   ];
@@ -150,7 +164,7 @@ const ClientsSlider = () => {
       {clients.map((client) => (
         <a key={client.id} href={client.href} target="_blank">
           <div className={classes.card}>
-            <img src={client.img} alt={`Логотип компании ${client.name}`} />
+            <client.icon />
           </div>
         </a>
       ))}
