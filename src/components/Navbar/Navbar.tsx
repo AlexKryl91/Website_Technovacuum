@@ -1,5 +1,5 @@
 import * as classes from './Navbar.module.scss';
-import Logo from './Logo';
+import Logo from '../UI/Logo';
 import LangSwitcher from './LangSwitcher';
 import LoginButton from './LoginButton';
 import ruTextContent from './ru.json';

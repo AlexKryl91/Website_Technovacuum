@@ -1,0 +1,175 @@
+.footer {
+  width: 100%;
+  overflow: hidden;
+  margin-top: -50px;
+  background: var(--color-footer);
+  clip-path: var(--section-clippath-desktop);
+  position: relative;
+
+  &-decoration-left {
+    $stripe-shadow: 4px 4px 4px var(--color-shadow);
+
+    $width-s: 9px;
+    $width-m: 21px;
+    $width-l: 30px;
+    $width-xl: 70px;
+
+    $space-1: 14px;
+    $space-2: 20px;
+    $space-3: 22px;
+
+    position: absolute;
+    top: 90px;
+    left: 0;
+    height: 52px;
+    transform-origin: left bottom;
+    transform: skew(-45deg);
+
+    // .bar {
+    //   position: relative;
+    //   top: 0;
+    //   left: 0;
+    //   width: 30%;
+    //   height: 100%;
+
+    //   transform-origin: left bottom;
+    //   transform: skew(-45deg);
+    // }
+
+    .stripe-s {
+      height: 100%;
+      width: 9px;
+      position: absolute;
+      left: calc(
+        $width-xl + $space-1 + $width-l + $space-2 + $width-m + $space-3
+      );
+      top: 0;
+      background: var(--color-orange-bright);
+      box-shadow: $stripe-shadow;
+    }
+    .stripe-m {
+      height: 100%;
+      width: $width-m;
+      position: absolute;
+      left: calc($width-xl + $space-1 + $width-l + $space-2);
+      top: 0;
+      background: var(--color-orange-reddish);
+      box-shadow: $stripe-shadow;
+    }
+    .stripe-l {
+      height: 100%;
+      width: $width-l;
+      position: absolute;
+      top: 0;
+      left: calc($width-xl + $space-1);
+      background: var(--color-orange-faded);
+      box-shadow: $stripe-shadow;
+    }
+    .stripe-xl {
+      $offset-x: -60px;
+
+      height: 100%;
+      width: calc($width-xl - $offset-x);
+      position: absolute;
+      top: 0;
+      left: $offset-x;
+      background: var(--color-accent-1);
+      box-shadow: $stripe-shadow;
+    }
+  }
+
+  &-decoration-right {
+    position: absolute;
+    bottom: 0px;
+    left: 78%;
+    height: 300px;
+    transform-origin: left bottom;
+    transform: skew(-45deg);
+
+    .stripe-s {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 8px;
+      height: 180px;
+      background: var(--color-accent-2);
+    }
+    .stripe-m {
+      position: absolute;
+      bottom: 70px;
+      left: 20px;
+      width: 20px;
+      height: 230px;
+      background: var(--color-accent-3);
+    }
+    .stripe-l {
+      position: absolute;
+      bottom: 0;
+      left: 120px;
+      width: 240px;
+      height: 175px;
+      background: var(--color-text-dark);
+    }
+    .stripe-xl {
+      position: absolute;
+      bottom: 0;
+      left: 60px;
+      width: 200px;
+      height: 250px;
+      background: var(--color-accent-1);
+    }
+  }
+
+  &-body {
+    width: 100%;
+    height: 100%;
+    max-width: var(--desktop-max-width);
+    padding: 50px var(--desktop-side-spacing) 70px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    align-items: end;
+
+    .info-container {
+      margin-inline: auto;
+      font-size: 16px;
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 50px 85px;
+
+      .address-wrapper {
+        margin-inline: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .footer {
+    clip-path: none;
+
+    &-decoration-left {
+      top: auto;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .footer {
+    &-body {
+      padding: 50px var(--mobile-side-spacing) 70px;
+
+      .info-container {
+        font-size: 14px;
+      }
+    }
+  }
+}

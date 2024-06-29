@@ -3,7 +3,7 @@ import ruTextContent from './ru.json';
 import enTextContent from './en.json';
 import { useContext, useState } from 'react';
 import { LangContext } from '@/context/context';
-import LogoMobile from './LogoMobile';
+import LogoMobile from '@/components/UI/LogoMobile';
 import BurgerMenu from './BurgerMenu';
 import BurgerButton from './BurgerButton';
 

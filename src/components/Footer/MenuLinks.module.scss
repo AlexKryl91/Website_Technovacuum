@@ -1,0 +1,39 @@
+.link-wrapper {
+  margin: 10px auto 0;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+
+  gap: 60px 80px;
+
+  .link-group {
+    list-style: none;
+
+    li {
+      margin-top: 16px;
+      font-weight: 100;
+
+      a,
+      a:visited {
+        color: var(--color-text-placeholder);
+      }
+
+      a:hover {
+        color: var(--color-text-light);
+      }
+    }
+  }
+
+  .link-login {
+    color: var(--color-orange-bright);
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .link-wrapper {
+    gap: 40px 50px;
+  }
+}

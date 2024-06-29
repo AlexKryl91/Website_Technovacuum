@@ -5,6 +5,7 @@ import useIsMobile from '@/hooks/useIsMobile';
 import Navbar from '@/components/Navbar/Navbar';
 import NavbarMobile from '@/components/NavbarMobile/NavbarMobile';
 import './App.scss';
+import Footer from './Footer/Footer';
 
 const App = () => {
   const [lang, setLang] = useState<string>('ru');
@@ -14,7 +15,7 @@ const App = () => {
     <LangContext.Provider value={{ lang, setLang }}>
       {isMobile ? <NavbarMobile /> : <Navbar />}
       <Outlet />
-      {isMobile ? 'MobileFooter' : 'DesktopFooter'}
+      <Footer />
     </LangContext.Provider>
   );
 };

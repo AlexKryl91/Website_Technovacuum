@@ -44,6 +44,36 @@ export interface IBurgerButton {
   setActive: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+// Footer Interface
+export type TCreator = {
+  creator: string;
+};
+
+type TAdress = {
+  line_1: string;
+  line_2: string;
+  line_3: string;
+  line_4?: string;
+};
+
+type TPhone = {
+  line_1: string;
+  line_2: string;
+  line_3: string;
+};
+
+export interface IAddress {
+  organization: string;
+  address: TAdress;
+  telephone: TPhone;
+  email: string;
+}
+
+export interface IMenuLinks {
+  menu: IMenuItem[];
+  login: ILoginButton;
+}
+
 // UI Components
 
 export interface IButtonLink {
