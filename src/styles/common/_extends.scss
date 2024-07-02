@@ -21,3 +21,17 @@
   align-items: center;
   flex-direction: column;
 }
+
+// %section-photo-bg {
+//   margin-top: -20px;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center 5px;
+// }
+
+%section-white-bg {
+  margin-top: -50px;
+  padding-bottom: 20px;
+  background: var(--color-bg-white);
+  clip-path: var(--section-clippath-desktop);
+}

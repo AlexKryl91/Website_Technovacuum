@@ -1,14 +1,15 @@
+@import '@/styles/common/visually_hidden';
+
 .cards-slider {
   position: relative;
   display: flex;
   flex-direction: row;
-  column-gap: 20px;
   animation: slide 120s infinite linear;
 }
 
 .card {
   width: 200px;
-  height: 250px;
+  height: 200px;
   transition: all var(--transition-duration);
 
   display: flex;
@@ -53,27 +54,6 @@
 @media screen and (max-width: 666px) {
   .card {
     width: 160px;
-    height: 200px;
-
-    img {
-      width: 128px;
-      height: auto;
-    }
-  }
-}
-
-@media screen and (max-width: 568px) {
-  .cards-slider {
-    column-gap: 10px;
-  }
-
-  .card {
-    width: 120px;
-    height: 150px;
-
-    img {
-      width: 96px;
-      height: auto;
-    }
+    height: 160px;
   }
 }

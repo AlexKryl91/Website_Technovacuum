@@ -1,10 +1,10 @@
 .footer {
-  width: 100%;
+  position: relative;
   overflow: hidden;
+  width: 100%;
   margin-top: -50px;
   background: var(--color-footer);
   clip-path: var(--section-clippath-desktop);
-  position: relative;
 
   &-decoration-left {
     $stripe-shadow: 4px 4px 4px var(--color-shadow);
@@ -12,7 +12,7 @@
     $width-s: 9px;
     $width-m: 21px;
     $width-l: 30px;
-    $width-xl: 70px;
+    $width-xl: 130px;
 
     $space-1: 14px;
     $space-2: 20px;
@@ -20,29 +20,20 @@
 
     position: absolute;
     top: 90px;
-    left: 0;
+    right: calc(50% + 450px);
     height: 52px;
+    width: 250px;
+
     transform-origin: left bottom;
     transform: skew(-45deg);
 
-    // .bar {
-    //   position: relative;
-    //   top: 0;
-    //   left: 0;
-    //   width: 30%;
-    //   height: 100%;
-
-    //   transform-origin: left bottom;
-    //   transform: skew(-45deg);
-    // }
+    // background: teal;
 
     .stripe-s {
       height: 100%;
       width: 9px;
       position: absolute;
-      left: calc(
-        $width-xl + $space-1 + $width-l + $space-2 + $width-m + $space-3
-      );
+      right: 0;
       top: 0;
       background: var(--color-orange-bright);
       box-shadow: $stripe-shadow;
@@ -51,7 +42,7 @@
       height: 100%;
       width: $width-m;
       position: absolute;
-      left: calc($width-xl + $space-1 + $width-l + $space-2);
+      right: calc($width-s + $space-1);
       top: 0;
       background: var(--color-orange-reddish);
       box-shadow: $stripe-shadow;
@@ -61,18 +52,18 @@
       width: $width-l;
       position: absolute;
       top: 0;
-      left: calc($width-xl + $space-1);
+      right: calc($width-s + $space-1 + $width-m + $space-2);
       background: var(--color-orange-faded);
       box-shadow: $stripe-shadow;
     }
     .stripe-xl {
-      $offset-x: -60px;
-
       height: 100%;
-      width: calc($width-xl - $offset-x);
+      width: calc($width-xl);
       position: absolute;
       top: 0;
-      left: $offset-x;
+      right: calc(
+        $width-s + $space-1 + $width-m + $space-2 + $width-l + $space-3
+      );
       background: var(--color-accent-1);
       box-shadow: $stripe-shadow;
     }
@@ -152,12 +143,12 @@
 
 @media screen and (max-width: 1100px) {
   .footer {
-    clip-path: none;
+    clip-path: var(--section-clippath-mobile);
 
     &-decoration-left {
       top: auto;
       bottom: 0;
-      left: 0;
+      left: -70px;
     }
   }
 }
@@ -169,6 +160,10 @@
 
       .info-container {
         font-size: 14px;
+
+        .address-wrapper {
+          padding-left: 24px;
+        }
       }
     }
   }

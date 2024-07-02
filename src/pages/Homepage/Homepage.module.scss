@@ -1,4 +1,6 @@
 @import '@/styles/common/visually_hidden';
+@import '@/styles/common/mixins';
+@import '@/styles/common/extends';
 
 .main {
   width: 100%;
@@ -15,6 +17,7 @@
   padding-inline: var(--mobile-side-spacing);
   font-family: var(--font-family-header);
   font-size: 36px;
+  text-wrap: balance;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,11 +30,7 @@
 
 .banner {
   height: 850px;
-  position: relative;
-  background: url('@/assets/img/homepage_bg_1.jpg');
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include top-section-photo-bg(url('@/assets/img/homepage_bg_1.jpg'));
 
   &-decoration {
     position: absolute;
@@ -105,7 +104,7 @@
     width: 100%;
     height: 100%;
     max-width: var(--desktop-max-width);
-    padding: 90px var(--desktop-side-spacing) 0;
+    padding: var(--desktop-navbar-height) var(--desktop-side-spacing) 0;
     margin: auto;
   }
 
@@ -141,10 +140,7 @@
 }
 
 .advantage {
-  margin-top: -50px;
-  padding-bottom: 20px;
-  background: var(--color-bg-white);
-  clip-path: var(--section-clippath-desktop);
+  @extend %section-white-bg;
 
   &-body {
     position: relative;
@@ -229,6 +225,7 @@
 
       .caption {
         padding: 5px 0 5px;
+        line-height: 23px;
       }
     }
   }
@@ -299,10 +296,7 @@
 }
 
 .clients {
-  margin-top: -50px;
-  padding-bottom: 20px;
-  background: var(--color-bg-white);
-  clip-path: var(--section-clippath-desktop);
+  @extend %section-white-bg;
 
   &-body {
     position: relative;
@@ -314,8 +308,6 @@
 
     display: flex;
     flex-direction: row;
-
-    column-gap: 20px;
 
     -webkit-mask-image: -webkit-gradient(
       linear,
@@ -404,9 +396,8 @@
 }
 
 .feedback {
-  margin-top: -50px;
-  background: var(--color-bg-white);
-  clip-path: var(--section-clippath-desktop);
+  @extend %section-white-bg;
+
   color: var(--color-text-dark);
   font-size: 20px;
 
@@ -470,7 +461,7 @@
     width: 100%;
     max-width: var(--desktop-max-width);
     padding-inline: var(--desktop-side-spacing);
-    margin: 30px auto 100px;
+    margin: 30px auto 80px;
     text-align: center;
     font-weight: 500;
 
@@ -482,8 +473,17 @@
     .end-phrase {
       font-size: 24px;
 
-      a:visited {
-        color: var(--color-text-dark);
+      a {
+        transition: all var(--transition-duration);
+
+        &:visited {
+          color: var(--color-text-dark);
+        }
+
+        &:hover,
+        &:visited:hover {
+          color: var(--color-orange-faded);
+        }
       }
     }
   }
@@ -540,6 +540,14 @@
   .join {
     background-position-y: 5px;
     background-position-x: 0;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .advantage,
+  .clients,
+  .feedback {
+    clip-path: var(--section-clippath-mobile);
   }
 }
 
@@ -701,7 +709,6 @@
   .clients {
     &-body {
       width: calc(100% - var(--mobile-side-spacing) * 2);
-      column-gap: 10px;
     }
   }
 

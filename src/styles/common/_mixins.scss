@@ -1,0 +1,7 @@
+@mixin top-section-photo-bg($bg-url) {
+  position: relative;
+  background: $bg-url;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,6 +1,6 @@
 import * as classes from './NavbarMobile.module.scss';
-import ruTextContent from './ru.json';
-import enTextContent from './en.json';
+import ruTextContent from '@/components/locales/ru.json';
+import enTextContent from '@/components/locales/en.json';
 import { useContext, useState } from 'react';
 import { LangContext } from '@/context/context';
 import LogoMobile from '@/components/UI/LogoMobile';

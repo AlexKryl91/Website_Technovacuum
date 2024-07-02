@@ -1,0 +1,60 @@
+{
+  "banner": {
+    "header": "Technovacuum. Jet devices",
+    "img_alt": "Steam ejector",
+    "tagline": {
+      "line_1": "Modern technologies",
+      "line_2": "Scientific research",
+      "line_3": "Implementations"
+    },
+    "profile": "We develop and implement new environmentally friendly and resource-saving technologies at industrial oil, gas and petrochemical enterprises"
+  },
+  "advantage": {
+    "header": "Why do people choose us?",
+    "img1_alt": "Photo of the second stage of the vacuum-creating system",
+    "mark1": "projects",
+    "img2_alt": "Photo of the jet absorption unit on an oil loading rack",
+    "mark2": "exp years",
+    "adv1": "Modern and advanced solutions for many different industrial problems",
+    "adv2": "Solutions based on scientific research and testing",
+    "adv3": "Extensive experience in implementing industrial systems and installations",
+    "link_btn": "Learn more >"
+  },
+  "offer": {
+    "header": "What we do?",
+    "li1": {
+      "img_alt": "Refinery",
+      "description": "Developments and technological solutions based on vacuum-creating systems, jet compressors or jet absorption units for various industrial problems"
+    },
+    "li2": {
+      "img_alt": "Employees inspect the installation",
+      "description": "Inspection services of production and installations, process modeling, technical and economic analysis, development of technical specifications and basic design, etc."
+    },
+    "li3": {
+      "img_alt": "Piping",
+      "description": "Optimal installation of our products in modernization or reconstruction conditions installations to suit the Client’s goals with an overall increase in productivity and efficiency"
+    },
+    "link_btn": "Learn more >"
+  },
+  "clients": {
+    "header": "Our Clients"
+  },
+  "join": {
+    "header": "Join our team!",
+    "text": "If you want to join our team, take a part in the development and implementation of new technologies and find the embodiment of your ideas in metal, check out the open vacancies or send your resume to our email!",
+    "link_btn_careers": "Careers",
+    "link_btn_contacts": "Contacts"
+  },
+  "feedback": {
+    "header": "Contact us",
+    "feedback_text": "To receive more detailed information from our specialists, fill out the feedback form. If you are registered on our website, you can also fill out questionnaires and specifications of the required equipment in the User account.",
+    "input_name": "Your name",
+    "input_company": "Company name",
+    "imput_tel": "Phone number",
+    "input_email": "Enter email",
+    "input_msg": "Message",
+    "submit_btn": "Submit",
+    "callin_text": "If you need environmentally friendly systems, want to reduce emissions, energy  and resource consumption, are planning to construct new facilities or to upgrade existing ones...",
+    "callin_link": "Contact us!"
+  }
+}

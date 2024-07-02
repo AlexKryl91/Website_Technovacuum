@@ -19,15 +19,20 @@ import HorizontalBar from '@/components/UI/HorizontalBar';
 import { Link } from 'react-router-dom';
 import ClientsSlider from '@/components/ClientsSlider/ClientsSlider';
 
+import ruTextContent from './ru.json';
+import enTextContent from './en.json';
+
 const Homepage = () => {
   const { lang } = useContext(LangContext);
+
+  const content = lang === 'en' ? enTextContent : ruTextContent;
+
+  const { banner, advantage, offer, clients, join, feedback } = content;
 
   return (
     <main className={classes.main}>
       <section className={classes.banner}>
-        <h1 className={classes['visually-hidden']}>
-          Техновакуум. Струйная техника
-        </h1>
+        <h1 className={classes['visually-hidden']}>{banner.header}</h1>
         <div className={classes['banner-decoration']}>
           <div className={classes.stripes}>
             <div className={classes['stripes-s']}></div>
@@ -35,85 +40,68 @@ const Homepage = () => {
             <div className={classes['stripes-xl']}></div>
             <div className={classes['stripes-l']}></div>
           </div>
-          <img src={imgEjector} alt="Паровой эжектор" />
+          <img src={imgEjector} alt={banner.img_alt} />
         </div>
         <div className={classes['banner-body']}>
           <div className={classes['banner-text']}>
             <h2 className={classes.tagline}>
-              Научные исследования
+              {banner.tagline.line_1}
               <br />
-              Новые технологии
+              {banner.tagline.line_2}
               <br />
-              Внедрения
+              {banner.tagline.line_3}
             </h2>
             <div className={classes['h-line']}></div>
-            <p className={classes.description}>
-              Разрабатываем и внедряем новые экологически чистые и
-              ресурсосберегающие технологии на промышленные предприятия
-              нефтяной, газовой и нефтехимической отраслей
-            </p>
+            <p className={classes.description}>{banner.profile}</p>
           </div>
         </div>
       </section>
 
       <section className={classes.advantage}>
         <h3 className={classes['section-header'] + ` ${classes['dark']}`}>
-          Почему именно мы?
+          {advantage.header}
         </h3>
         <div className={classes['advantage-body']}>
           <div className={classes.illustration}>
-            <img
-              src={imgAfipka}
-              alt="Фото воторой ступени вакуумсоздающей системы"
-            />
+            <img src={imgAfipka} alt={advantage.img1_alt} />
             <div className={classes.mark}>
               <p>60+</p>
-              <p>внедрений</p>
+              <p>{advantage.mark1}</p>
             </div>
             <div className={classes.mark}>
               <p>30+</p>
-              <p>лет опыта</p>
+              <p>{advantage.mark2}</p>
             </div>
-            <img
-              src={imgKrotovka}
-              alt="Фото струйно-абсорбционной установки на нефтеналивной эстакаде"
-            />
+            <img src={imgKrotovka} alt={advantage.img2_alt} />
           </div>
           <div className={classes.points}>
             <IconModern />
             <div className={classes['points-description']}>
-              <p className={classes.caption}>
-                Современные технологичные решения для различных промышленных
-                задач
-              </p>
+              <p className={classes.caption}>{advantage.adv1}</p>
               <ButtonLink
                 size="small"
                 theme="light"
-                value="Подробнее >"
+                value={advantage.link_btn}
                 path="/products&services"
               />
             </div>
             <IconScience />
             <div className={classes['points-description']}>
-              <p className={classes.caption}>
-                Решения, подкреплённые научными исследованиями и испытаниями
-              </p>
+              <p className={classes.caption}>{advantage.adv2}</p>
               <ButtonLink
                 size="small"
                 theme="light"
-                value="Подробнее >"
+                value={advantage.link_btn}
                 path="/about"
               />
             </div>
             <IconExperience />
             <div className={classes['points-description']}>
-              <p className={classes.caption}>
-                Огромный опыт внедрений промышленных систем и установок
-              </p>
+              <p className={classes.caption}>{advantage.adv3}</p>
               <ButtonLink
                 size="small"
                 theme="light"
-                value="Подробнее >"
+                value={advantage.link_btn}
                 path="/implementations"
               />
             </div>
@@ -123,23 +111,18 @@ const Homepage = () => {
 
       <section className={classes.offer}>
         <HorizontalBar spacer={true} />
-        <h3 className={classes['section-header']}>Что мы предлагаем?</h3>
+        <h3 className={classes['section-header']}>{offer.header}</h3>
 
         <ul className={classes['offer-points']}>
           <li className={classes['point-item']}>
             <div className={classes['item-wrapper']}>
-              <img src={imgItem1} alt="Нефтепереабатывающий завод" />
+              <img src={imgItem1} alt={offer.li1.img_alt} />
               <div className={classes['item-description']}>
-                <p className={classes.caption}>
-                  Наши разработки и технологические решения на основе
-                  вакуумсоздающих систем, струйных компрессоров или
-                  струйно-абсорбционных установок для различных промышленных
-                  задач
-                </p>
+                <p className={classes.caption}>{offer.li1.description}</p>
                 <ButtonLink
                   size="small"
                   theme="light"
-                  value="Подробнее >"
+                  value={offer.link_btn}
                   path="/solutions"
                 />
               </div>
@@ -147,17 +130,13 @@ const Homepage = () => {
           </li>
           <li className={classes['point-item']}>
             <div className={classes['item-wrapper']}>
-              <img src={imgItem2} alt="Сотрудники обследуют установку" />
+              <img src={imgItem2} alt={offer.li2.img_alt} />
               <div className={classes['item-description']}>
-                <p className={classes.caption}>
-                  Услуги и работы по обследованию производств и установок,
-                  моделированию процессов, технико-экономическому анализу,
-                  разработке технического задания и базового проекта, и прочее
-                </p>
+                <p className={classes.caption}>{offer.li2.description}</p>
                 <ButtonLink
                   size="small"
                   theme="light"
-                  value="Подробнее >"
+                  value={offer.link_btn}
                   path="/products&services"
                 />
               </div>
@@ -165,17 +144,13 @@ const Homepage = () => {
           </li>
           <li className={classes['point-item']}>
             <div className={classes['item-wrapper']}>
-              <img src={imgItem3} alt="Трубопроводная обвязка" />
+              <img src={imgItem3} alt={offer.li3.img_alt} />
               <div className={classes['item-description']}>
-                <p className={classes.caption}>
-                  Оптимальное внедрение нашей продукции при модернизации или
-                  реконструкции установок под цели и задачи Клиента при общем
-                  увеличении производительности и эффективности
-                </p>
+                <p className={classes.caption}>{offer.li3.description}</p>
                 <ButtonLink
                   size="small"
                   theme="light"
-                  value="Подробнее >"
+                  value={offer.link_btn}
                   path="/implementations"
                 />
               </div>
@@ -186,37 +161,30 @@ const Homepage = () => {
 
       <section className={classes.clients}>
         <h3 className={classes['section-header'] + ` ${classes['dark']}`}>
-          Наши клиенты
+          {clients.header}
         </h3>
         <div className={classes['clients-body']}>
-          <ClientsSlider />
-          <ClientsSlider />
+          <ClientsSlider lang={lang} />
+          <ClientsSlider lang={lang} />
         </div>
       </section>
 
       <section className={classes.join}>
         <HorizontalBar spacer={true} />
-        <h3 className={classes['section-header']}>
-          Стань частью нашей команды!
-        </h3>
+        <h3 className={classes['section-header']}>{join.header}</h3>
         <div className={classes['text-bar']}>
-          <p className={classes['invite-text']}>
-            Если Вы хотите присоединиться к нашему коллективу, принять участие в
-            разработке и реализации новых технологий и найти воплощение своих
-            идей в металле – ознакомьтесь с открытыми вакансиями либо присылайте
-            Ваше резюме нам на почту!
-          </p>
+          <p className={classes['invite-text']}>{join.text}</p>
           <div className={classes['button-wrapper']}>
             <ButtonLink
               size="large"
               theme="dark"
-              value="Вакансии"
+              value={join.link_btn_careers}
               path="/careers"
             />
             <ButtonLink
               size="large"
               theme="dark"
-              value="Контакты"
+              value={join.link_btn_contacts}
               path="/contacts"
             />
           </div>
@@ -225,48 +193,50 @@ const Homepage = () => {
 
       <section className={classes.feedback}>
         <h3 className={classes['section-header'] + ` ${classes['dark']}`}>
-          Свяжитесь с нами
+          {feedback.header}
         </h3>
 
-        <p className={classes['feedback-text']}>
-          Для получения более подробной информации от наших специалистов
-          заполните форму обратной связи. Вы также можете заполнить опросные
-          листы со спецификацией необходимого оборудования в личном кабинете
-          Пользователя, предварительно зарегистрировавшись на нашем сайте.
-        </p>
+        <p className={classes['feedback-text']}>{feedback.feedback_text}</p>
         <div className={classes['form-field']}>
           <form className={classes['feedback-form']}>
             <input
               type="text"
               name="username"
-              placeholder="Ваше имя"
+              placeholder={feedback.input_name}
               required
             />
             <input
               type="text"
               name="organization"
-              placeholder="Название организации"
+              placeholder={feedback.input_company}
             />
-            <input type="tel" name="telephone" placeholder="Введите телефон" />
+            <input
+              type="tel"
+              name="telephone"
+              placeholder={feedback.imput_tel}
+            />
             <input
               type="email"
               name="email"
-              placeholder="Введите email"
+              placeholder={feedback.input_email}
               required
             />
-            <textarea name="message" placeholder="Сообщение"></textarea>
-            <ButtonLink size="large" theme="dark" value="Отправить" path="/" />
+            <textarea
+              name="message"
+              placeholder={feedback.input_msg}
+            ></textarea>
+            <ButtonLink
+              size="large"
+              theme="dark"
+              value={feedback.submit_btn}
+              path="/"
+            />
           </form>
         </div>
         <div className={classes['call-in']}>
-          <p className={classes['call-in-text']}>
-            Если Вы нуждаетесь в экологически чистых решениях, хотите
-            существенно снизить выбросы в окружающую среду, затраты энергии и
-            ресурсов, планируете строительство новых или модернизацию
-            существующих объектов...
-          </p>
+          <p className={classes['call-in-text']}>{feedback.callin_text}</p>
           <p className={classes['end-phrase']}>
-            <Link to={'/contacts'}>Обращайтесь к нам!</Link>
+            <Link to={'/contacts'}>{feedback.callin_link}</Link>
           </p>
         </div>
       </section>

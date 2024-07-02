@@ -1,9 +1,8 @@
 import * as classes from './Footer.module.scss';
 import { useContext } from 'react';
 import { LangContext } from '@/context/context';
-import { Link } from 'react-router-dom';
-import ruTextContent from './ru.json';
-import enTextContent from './en.json';
+import ruTextContent from '@/components/locales/ru.json';
+import enTextContent from '@/components/locales/en.json';
 import Logo from '@/components/UI/Logo';
 
 import Creator from './Creator';
