@@ -49,18 +49,8 @@ export type TCreator = {
   creator: string;
 };
 
-type TAdress = {
-  line_1: string;
-  line_2: string;
-  line_3: string;
-  line_4?: string;
-};
-
-type TPhone = {
-  line_1: string;
-  line_2: string;
-  line_3: string;
-};
+type TAdress = string[];
+type TPhone = string[];
 
 export interface IAddress {
   organization: string;
@@ -72,6 +62,28 @@ export interface IAddress {
 export interface IMenuLinks {
   menu: IMenuItem[];
   login: ILoginButton;
+}
+
+// Carousel Slider Interface
+interface IDiagramMap {
+  caption: string;
+  description: {
+    block1: string[];
+    block2: string[];
+  };
+}
+
+export interface ISlide {
+  id: number;
+  img: string;
+  img_alt: string;
+  text: IDiagramMap;
+  width?: string;
+}
+
+export interface ICarousel {
+  slides: ISlide[];
+  btn_label: string[];
 }
 
 // UI Components

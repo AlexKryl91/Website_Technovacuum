@@ -1,4 +1,5 @@
 import * as classes from './Homepage.module.scss';
+import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { LangContext } from '@/context/context';
 import imgEjector from '@/assets/img/tv_steam_ejector.png';
@@ -16,7 +17,6 @@ import imgItem3 from '@/assets/img/homepage_list_item_3.jpg';
 
 import ButtonLink from '@/components/UI/ButtonLink';
 import HorizontalBar from '@/components/UI/HorizontalBar';
-import { Link } from 'react-router-dom';
 import ClientsSlider from '@/components/ClientsSlider/ClientsSlider';
 
 import ruTextContent from './ru.json';
@@ -28,6 +28,9 @@ const Homepage = () => {
   const content = lang === 'en' ? enTextContent : ruTextContent;
 
   const { banner, advantage, offer, clients, join, feedback } = content;
+
+  const imgList = [imgItem1, imgItem2, imgItem3];
+  const pathList = ['/solutions', '/products&services', '/implementations'];
 
   return (
     <main className={classes.main}>
@@ -45,11 +48,11 @@ const Homepage = () => {
         <div className={classes['banner-body']}>
           <div className={classes['banner-text']}>
             <h2 className={classes.tagline}>
-              {banner.tagline.line_1}
+              {banner.tagline[0]}
               <br />
-              {banner.tagline.line_2}
+              {banner.tagline[1]}
               <br />
-              {banner.tagline.line_3}
+              {banner.tagline[2]}
             </h2>
             <div className={classes['h-line']}></div>
             <p className={classes.description}>{banner.profile}</p>
@@ -114,48 +117,20 @@ const Homepage = () => {
         <h3 className={classes['section-header']}>{offer.header}</h3>
 
         <ul className={classes['offer-points']}>
-          <li className={classes['point-item']}>
-            <div className={classes['item-wrapper']}>
-              <img src={imgItem1} alt={offer.li1.img_alt} />
-              <div className={classes['item-description']}>
-                <p className={classes.caption}>{offer.li1.description}</p>
+          {offer.list.map((item, i) => (
+            <li key={item.id} className={classes['point-item']}>
+              <img src={imgList[i]} alt={item.img_alt} />
+              <div className={classes['item-wrapper']}>
+                <p className={classes.description}>{item.description}</p>
                 <ButtonLink
                   size="small"
                   theme="light"
                   value={offer.link_btn}
-                  path="/solutions"
+                  path={pathList[i]}
                 />
               </div>
-            </div>
-          </li>
-          <li className={classes['point-item']}>
-            <div className={classes['item-wrapper']}>
-              <img src={imgItem2} alt={offer.li2.img_alt} />
-              <div className={classes['item-description']}>
-                <p className={classes.caption}>{offer.li2.description}</p>
-                <ButtonLink
-                  size="small"
-                  theme="light"
-                  value={offer.link_btn}
-                  path="/products&services"
-                />
-              </div>
-            </div>
-          </li>
-          <li className={classes['point-item']}>
-            <div className={classes['item-wrapper']}>
-              <img src={imgItem3} alt={offer.li3.img_alt} />
-              <div className={classes['item-description']}>
-                <p className={classes.caption}>{offer.li3.description}</p>
-                <ButtonLink
-                  size="small"
-                  theme="light"
-                  value={offer.link_btn}
-                  path="/implementations"
-                />
-              </div>
-            </div>
-          </li>
+            </li>
+          ))}
         </ul>
       </section>
 

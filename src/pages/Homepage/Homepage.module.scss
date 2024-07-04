@@ -1,5 +1,4 @@
 @import '@/styles/common/visually_hidden';
-@import '@/styles/common/mixins';
 @import '@/styles/common/extends';
 
 .main {
@@ -30,7 +29,11 @@
 
 .banner {
   height: 850px;
-  @include top-section-photo-bg(url('@/assets/img/homepage_bg_1.jpg'));
+  position: relative;
+  background: url('@/assets/img/homepage_bg_1.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &-decoration {
     position: absolute;
@@ -239,7 +242,6 @@
   background-position: center 5px;
 
   &-points {
-    position: relative;
     width: 100%;
     max-width: var(--desktop-max-width);
     margin: 0 auto 120px;
@@ -247,7 +249,9 @@
     list-style: none;
 
     .point-item {
-      margin-bottom: 40px;
+      max-width: var(--desktop-max-width);
+      padding-inline: var(--desktop-side-spacing);
+      margin: 0 auto 40px;
       background: linear-gradient(
         90deg,
         transparent 0%,
@@ -255,41 +259,36 @@
         var(--color-tr80-greyishblue) 94%,
         transparent 100%
       );
+
       color: var(--color-text-dark);
       font-size: 20px;
 
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 80px;
+
+      img {
+        margin: -10px auto -10px;
+        width: 270px;
+        height: 180px;
+        box-shadow: 4px 4px 4px var(--color-shadow);
+        border-radius: var(--border-radius-large);
+      }
+
       .item-wrapper {
-        margin: auto;
-        padding-inline: var(--desktop-side-spacing);
-        max-width: var(--desktop-max-width);
+        width: 100%;
+        max-width: 750px;
+        margin: 0 auto 0;
+        padding-bottom: 10px;
 
         display: flex;
-        flex-wrap: wrap;
-        gap: 10px 80px;
+        flex-direction: column;
+        align-items: flex-end;
+      }
 
-        img {
-          margin: -10px auto -10px;
-          width: 270px;
-          height: 180px;
-          box-shadow: 4px 4px 4px var(--color-shadow);
-          border-radius: var(--border-radius-large);
-        }
-
-        .item-description {
-          width: 100%;
-          max-width: 750px;
-          margin: 0 auto 0;
-          padding-bottom: 10px;
-
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-        }
-
-        .caption {
-          line-height: 23px;
-          margin: 32px 0 10px;
-        }
+      .description {
+        line-height: 23px;
+        margin: 32px 0 10px;
       }
     }
   }
@@ -497,7 +496,7 @@
     &-points {
       .point-item {
         .item-wrapper {
-          .item-description {
+          .description {
             text-align: center;
             align-items: center;
           }
@@ -695,12 +694,9 @@
   .offer {
     &-points {
       .point-item {
-        .item-wrapper {
-          padding-inline: var(--mobile-side-spacing);
-
-          .caption {
-            font-size: 16px;
-          }
+        padding-inline: var(--mobile-side-spacing);
+        .description {
+          font-size: 16px;
         }
       }
     }

@@ -1,0 +1,91 @@
+.carousel {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 32px auto 32px;
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+
+  .slider-btn {
+    width: 32px;
+    height: 32px;
+    margin-block: auto;
+    border-radius: var(--border-radius-small);
+    background: var(--color-bg-greyishblue);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 19px;
+      height: auto;
+
+      * {
+        fill: var(--color-text-placeholder);
+      }
+    }
+
+    &:hover {
+      background: var(--color-text-placeholder);
+
+      svg * {
+        fill: var(--color-accent-3);
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    width: 100%;
+    height: 450px;
+    border-radius: var(--border-radius-large);
+    box-shadow: 4px 0px 6px var(--color-shadow);
+
+    .slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      transition: all var(--transition-duration);
+
+      .slide {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  .bullets-wrapper {
+    grid-column: span 3;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+
+    .bullet {
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      background-color: var(--color-text-placeholder);
+      transition: all var(--transition-duration);
+
+      &:hover {
+        background-color: var(--color-accent-3);
+      }
+    }
+
+    .selected {
+      background-color: var(--color-accent-3);
+    }
+  }
+}
+
+.left {
+  transform: rotateY(180deg);
+}

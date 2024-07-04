@@ -35,17 +35,17 @@
   "login": { "value": "Login" },
   "info": {
     "organization": "2024. TECHNOVACUUM LLC",
-    "address": {
-      "line_1": "Russia, 105082, Moscow",
-      "line_2": "Bolshaya Pochtovaya St, 26В,",
-      "line_3": "building 2, floor 5,",
-      "line_4": "placement 1, room 11А"
-    },
-    "telephone": {
-      "line_1": "+7 (495) 956-76-21",
-      "line_2": "+7 (499) 261-99-98",
-      "line_3": "+7 (499) 267-82-03"
-    },
+    "address": [
+      "Russia, 105082, Moscow",
+      "Bolshaya Pochtovaya St, 26В,",
+      "building 2, floor 5,",
+      "placement 1, room 11А"
+    ],
+    "telephone": [
+      "+7 (495) 956-76-21",
+      "+7 (499) 261-99-98",
+      "+7 (499) 267-82-03"
+    ],
     "email": "info@technovacuum.ru"
   },
   "creator": "Website designed and build by Krylovsky Alexander"

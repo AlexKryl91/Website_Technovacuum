@@ -1,0 +1,135 @@
+$stripe-shadow: 4px 4px 4px var(--color-shadow);
+
+$width-s: 9px;
+$width-m: 21px;
+$width-l: 30px;
+
+$space-1: 14px;
+$space-2: 20px;
+$space-3: 22px;
+
+.break-line {
+  position: relative;
+  width: 100%;
+  height: 52px;
+}
+
+.spacer {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background: var(--color-bg-white);
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: left bottom;
+  transform: skew(-45deg);
+
+  .stripe-s {
+    height: 100%;
+    width: 9px;
+    position: absolute;
+    // right: calc(60% + $space-1 + $width-l + $space-2 + $width-m + $space-3);
+    right: -100px;
+    top: 0;
+    background: var(--color-orange-bright);
+    box-shadow: $stripe-shadow;
+  }
+  .stripe-m {
+    height: 100%;
+    width: $width-m;
+    position: absolute;
+    right: -100px;
+    // right: calc(60% + $space-1 + $width-l + $space-2);
+    top: 0;
+    background: var(--color-orange-reddish);
+    box-shadow: $stripe-shadow;
+  }
+  .stripe-l {
+    height: 100%;
+    width: $width-l;
+    position: absolute;
+    top: 0;
+    right: -100px;
+    // right: calc(60% + $space-1);
+    background: var(--color-orange-faded);
+    box-shadow: $stripe-shadow;
+  }
+  .stripe-xl {
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--color-accent-1);
+    box-shadow: $stripe-shadow;
+  }
+}
+
+// @supports (animation-timeline: view()) {
+//   section {
+//     view-timeline: --section-view;
+//   }
+
+//   .stripe-xl {
+//     animation: slide-xl ease-out forwards;
+//     scale: 0 1;
+//     transform-origin: right bottom;
+//     animation-timeline: --section-view;
+//     animation-range-start: 15dvh;
+//     animation-range-end: 20dvh;
+
+//     @keyframes slide-xl {
+//       to {
+//         scale: 1 1;
+//       }
+//     }
+//   }
+
+//   .stripe-l {
+//     animation: slide-l ease-out forwards;
+//     transform-origin: right bottom;
+//     animation-timeline: --section-view;
+//     animation-range-start: 15dvh;
+//     animation-range-end: 30dvh;
+
+//     @keyframes slide-l {
+//       to {
+//         right: calc(60% + $space-1);
+//       }
+//     }
+//   }
+
+//   .stripe-m {
+//     animation: slide-m ease-out forwards;
+//     transform-origin: right bottom;
+//     animation-timeline: --section-view;
+//     animation-range-start: 20dvh;
+//     animation-range-end: 35dvh;
+
+//     @keyframes slide-m {
+//       to {
+//         right: calc(60% + $space-1 + $width-l + $space-2);
+//       }
+//     }
+//   }
+
+//   .stripe-s {
+//     animation: slide-s ease-out forwards;
+//     transform-origin: right bottom;
+//     animation-timeline: --section-view;
+//     animation-range-start: 25dvh;
+//     animation-range-end: 40dvh;
+
+//     @keyframes slide-s {
+//       to {
+//         right: calc(60% + $space-1 + $width-l + $space-2 + $width-m + $space-3);
+//       }
+//     }
+//   }
+// }

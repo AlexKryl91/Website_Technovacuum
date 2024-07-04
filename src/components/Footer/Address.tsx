@@ -12,21 +12,21 @@ const Address: FC<IAddress> = ({ organization, address, telephone, email }) => {
       <p>{organization}</p>
       <IconLocation />
       <p>
-        {address.line_1}
+        {address[0]}
         <br />
-        {address.line_2}
+        {address[1]}
         <br />
-        {address.line_3}
+        {address[2]}
         <br />
-        {address.line_4}
+        {address[3]}
       </p>
       <IconTelephone />
       <p>
-        {telephone.line_1}
+        {telephone[0]}
         <br />
-        {telephone.line_2}
+        {telephone[1]}
         <br />
-        {telephone.line_3}
+        {telephone[2]}
       </p>
       <IconMail />
       <a href={`mailto: ${email}`} className={classes.email}>
