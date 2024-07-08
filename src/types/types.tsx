@@ -1,3 +1,4 @@
+import { FC, SVGProps } from 'react';
 // App state
 
 // Navbar Interface
@@ -86,8 +87,48 @@ export interface ICarousel {
   btn_label: string[];
 }
 
-// UI Components
+// Dynamic Subpages Interface
+type TOperation = {
+  title: string;
+  blocks: string[];
+};
 
+type TFeatures = {
+  title: string;
+  list: {
+    id: string;
+    item: string;
+  }[];
+}[];
+
+type TCommon = {
+  summary: string[];
+  expand_btn: string[];
+  slider_btn: string[];
+};
+
+interface ISubpageContent {
+  title: string;
+  description: {
+    strong: string;
+    text: string;
+  };
+  slides: ISlide[];
+  operation: TOperation;
+  features: TFeatures;
+  state_btn: string[];
+}
+
+export interface ISubpage {
+  icon: React.ReactNode;
+  subpage: ISubpageContent;
+  common: TCommon;
+  parentState?: boolean;
+  subpageState: boolean;
+  setSubpageState: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+// UI Components
 export interface IButtonLink {
   size: 'small' | 'large';
   theme: 'light' | 'dark';
@@ -97,4 +138,11 @@ export interface IButtonLink {
 
 export interface IHorizontalBar {
   spacer: boolean;
+}
+
+export interface IHBarButton {
+  value: string;
+  visible: boolean;
+  active: boolean;
+  setActive?: React.Dispatch<React.SetStateAction<boolean>>;
 }

@@ -46,6 +46,15 @@
   // for effects
   --transition-duration: 0.2s;
   // clippaths
+  --section-clippath-desktop-xl: polygon(
+    0% 0%,
+    calc(50% - 360px) 0,
+    calc(50% - 360px) 40px,
+    calc(50% - 320px) 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
   --section-clippath-desktop: polygon(
     0% 0%,
     22% 0,

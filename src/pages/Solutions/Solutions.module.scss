@@ -1,6 +1,5 @@
 @import '@/styles/common/visually_hidden';
 @import '@/styles/common/mixins';
-// @import '@/styles/common/extends';
 
 .main {
   width: 100%;
@@ -110,117 +109,15 @@
   }
 }
 
-.subpage {
-  width: 100%;
-  //   height: 0;
-  margin-bottom: 40px;
+.vcu-wrapper {
+  max-height: 0;
   overflow: hidden;
-
-  background: var(--color-bg-white);
-  clip-path: var(--section-clippath-desktop);
-  color: var(--color-text-dark);
-  font-size: 20px;
-  line-height: 23px;
-
-  transition: height var(--transition-duration);
-
-  &-header-wrapper {
-    width: 100%;
-    max-width: var(--desktop-max-width);
-    height: 154px;
-    margin-inline: auto;
-    padding-inline: var(--desktop-side-spacing);
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-
-    svg {
-      width: 110px;
-      height: 70px;
-    }
-  }
-
-  &-header {
-    margin: auto;
-    font-family: var(--font-family-header);
-    font-size: 36px;
-    text-wrap: balance;
-    color: var(--color-text-dark);
-  }
-
-  &-body {
-    width: 100%;
-    max-width: var(--desktop-max-width);
-    padding-inline: var(--desktop-side-spacing);
-    margin: 0 auto 70px;
-
-    .text {
-      text-align: justify;
-
-      &:first-child {
-        margin-bottom: 50px;
-      }
-
-      p {
-        margin-bottom: 10px;
-
-        &:last-child {
-          margin-bottom: none;
-        }
-      }
-    }
-
-    h4,
-    strong {
-      font-weight: 500;
-    }
-
-    h4 {
-      margin-block: 30px 20px;
-    }
-
-    .vhc-advantage {
-      list-style: none;
-
-      li {
-        margin-bottom: 10px;
-        display: flex;
-        column-gap: 20px;
-
-        svg {
-          min-width: 19px;
-          margin-top: 1px;
-        }
-      }
-    }
-
-    .h-line {
-      max-width: 900px;
-      width: 100%;
-      height: 4px;
-      margin: 50px auto;
-      background: var(--color-accent-4);
-    }
-
-    .summary {
-      text-align: center;
-
-      a {
-        font-weight: 500;
-
-        &:visited {
-          color: var(--color-text-dark);
-        }
-      }
-    }
-  }
+  transition: all var(--transition-duration);
 }
 
-.active {
-  min-height: 500px;
-  height: auto;
+.active-wrapper {
+  padding-top: 20px;
+  max-height: 3700px;
 }
 
 // MEDIA QUERIES

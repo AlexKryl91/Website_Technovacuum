@@ -489,6 +489,13 @@
 }
 
 // MEDIA QUERIES
+@media screen and (min-width: 1281px) {
+  .advantage,
+  .clients,
+  .feedback {
+    clip-path: var(--section-clippath-desktop-xl);
+  }
+}
 
 // Special width ===>
 @media screen and (max-width: 1258px) {

@@ -5,6 +5,8 @@ import { ICarousel } from '@/types/types';
 import Slide from './Slide';
 
 const CarouselSlider: FC<ICarousel> = ({ slides, btn_label }) => {
+  const [labelBtnLeft, labelBtnRight] = btn_label;
+
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const maxIndex = slides.length - 1;
 
@@ -35,8 +37,8 @@ const CarouselSlider: FC<ICarousel> = ({ slides, btn_label }) => {
       <button
         onClick={decrementHandler}
         className={classes['slider-btn'] + ` ${classes.left}`}
-        aria-label={btn_label[0]}
-        title={btn_label[0]}
+        aria-label={labelBtnLeft}
+        title={labelBtnLeft}
       >
         <IconArrow />
       </button>
@@ -50,8 +52,8 @@ const CarouselSlider: FC<ICarousel> = ({ slides, btn_label }) => {
       <button
         onClick={incrementHandler}
         className={classes['slider-btn']}
-        aria-label={btn_label[1]}
-        title={btn_label[1]}
+        aria-label={labelBtnRight}
+        title={labelBtnRight}
       >
         <IconArrow />
       </button>
