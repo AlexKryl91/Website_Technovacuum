@@ -99,7 +99,7 @@ type TFeatures = {
     id: string;
     item: string;
   }[];
-}[];
+};
 
 type TCommon = {
   summary: string[];
@@ -112,10 +112,12 @@ interface ISubpageContent {
   description: {
     strong: string;
     text: string;
+    end_text?: string;
+    end_strong?: string;
   };
   slides: ISlide[];
-  operation: TOperation;
-  features: TFeatures;
+  operation: TOperation[];
+  features: TFeatures[];
   state_btn: string[];
 }
 

@@ -132,7 +132,7 @@ const Solutions = () => {
             </button>
           </div>
         </li>
-        {/* <Subpage {...subpages[2]} /> */}
+        <Subpage {...subpages[2]} />
 
         <li className={classes['systems-item']}>
           <div className={classes.icon}>
@@ -153,8 +153,9 @@ const Solutions = () => {
             </button>
           </div>
         </li>
-        {/* <Subpage {...subpages[3]} /> */}
+        <Subpage {...subpages[3]} />
       </ul>
+      <div className={classes['pre-footer']}></div>
     </main>
   );
 };

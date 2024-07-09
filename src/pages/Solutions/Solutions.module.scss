@@ -21,12 +21,13 @@
 
   .systems {
     width: 100%;
-    margin: 0 auto 120px;
+    margin: 0 auto 60px;
     list-style: none;
 
     &-item {
       width: 100%;
       max-width: var(--desktop-max-width);
+      padding-inline: var(--desktop-side-spacing);
       margin: 0 auto 40px;
       background: linear-gradient(
         90deg,
@@ -37,9 +38,6 @@
       );
       color: var(--color-text-light);
       font-size: 20px;
-
-      // margin: auto;
-      padding-inline: var(--desktop-side-spacing);
 
       display: flex;
       flex-wrap: wrap;
@@ -118,6 +116,12 @@
 .active-wrapper {
   padding-top: 20px;
   max-height: 3700px;
+}
+
+.pre-footer {
+  height: 60px;
+  width: 100%;
+  background: var(--color-bg-white);
 }
 
 // MEDIA QUERIES

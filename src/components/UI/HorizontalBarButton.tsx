@@ -10,9 +10,12 @@ const HorizontalBarButton: FC<IHBarButton> = ({
   setActive,
 }) => {
   const mainStyle = classes['break-line'].concat(
-    visible ? '' : ` ${classes.hidden}`
+    visible ? ` ${classes.intro}` : ` ${classes.hidden}`
   );
-  const btnStyle = classes.expand.concat(active ? ` ${classes.active}` : '');
+
+  const btnStyle = classes.expand.concat(
+    active ? ` ${classes['active-btn']}` : ''
+  );
   const styleChevron = classes.chevron.concat(active ? ` ${classes.open}` : '');
 
   return (

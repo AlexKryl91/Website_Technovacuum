@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import * as classes from './Subpage.module.scss';
 import IconArrow from '@/assets/icons/icon_arrow.svg';
 import CarouselSlider from '@/components/CarouselSlider/CarouselSlider';
-import HorizontalBarButton from './HorizontalBarButton';
+import HorizontalBarButton from '@/components/UI/HorizontalBarButton';
 import { ISubpage } from '@/types/types';
 
 const Subpage: FC<ISubpage> = ({
@@ -26,24 +26,36 @@ const Subpage: FC<ISubpage> = ({
           <h3 className={classes['subpage-header']}>{subpage.title}</h3>
         </div>
         <div className={classes['subpage-body']}>
-          <p className={classes['text']}>
-            <strong>{subpage.description.strong}</strong>
-            {subpage.description.text}
-          </p>
+          <div className={classes['text']}>
+            <p>
+              <strong>{subpage.description.strong}</strong>
+              {subpage.description.text}
+            </p>
+            {subpage.description.end_text && (
+              <p>
+                {subpage.description.end_text}
+                <strong>{subpage.description.end_strong}</strong>
+              </p>
+            )}
+          </div>
           <CarouselSlider
             slides={subpage.slides}
             btn_label={common.slider_btn}
           />
-          <h4>{subpage.operation.title}</h4>
-          <span className={classes['text']}>
-            {subpage.operation.blocks.map((block) => (
-              <p key={block}>{block}</p>
-            ))}
-          </span>
+          {subpage.operation.map((paragraph) => (
+            <div key={paragraph.title}>
+              <h4>{paragraph.title}</h4>
+              <div className={classes['text']}>
+                {paragraph.blocks.map((block) => (
+                  <p key={block}>{block}</p>
+                ))}
+              </div>
+            </div>
+          ))}
           {subpage.features.map((feature) => (
             <div key={feature.title}>
               <h4>{feature.title}</h4>
-              <ul className={classes.advantages}>
+              <ul className={classes.features}>
                 {feature.list.map((point) => (
                   <li key={point.id}>
                     <IconArrow />

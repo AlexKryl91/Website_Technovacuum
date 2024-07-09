@@ -53,8 +53,8 @@
       p {
         margin-bottom: 10px;
 
-        &:last-child {
-          margin-bottom: none;
+        &:last-of-type {
+          margin-bottom: 0;
         }
       }
     }
@@ -68,7 +68,7 @@
       margin-block: 30px 20px;
     }
 
-    .advantages {
+    .features {
       list-style: none;
 
       li {
