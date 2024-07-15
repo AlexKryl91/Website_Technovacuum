@@ -6,7 +6,19 @@
   background: var(--color-footer);
   clip-path: var(--section-clippath-desktop);
 
+  &-decoration-left,
+  &-decoration-right {
+    position: absolute;
+    transform-origin: left bottom;
+    transform: skew(-45deg);
+  }
+
   &-decoration-left {
+    top: 90px;
+    right: calc(50% + 450px);
+    height: 52px;
+    width: 250px;
+
     $stripe-shadow: 4px 4px 4px var(--color-shadow);
 
     $width-s: 9px;
@@ -18,67 +30,53 @@
     $space-2: 20px;
     $space-3: 22px;
 
-    position: absolute;
-    top: 90px;
-    right: calc(50% + 450px);
-    height: 52px;
-    width: 250px;
-
-    transform-origin: left bottom;
-    transform: skew(-45deg);
-
-    // background: teal;
-
-    .stripe-s {
-      height: 100%;
-      width: 9px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      background: var(--color-orange-bright);
-      box-shadow: $stripe-shadow;
-    }
-    .stripe-m {
-      height: 100%;
-      width: $width-m;
-      position: absolute;
-      right: calc($width-s + $space-1);
-      top: 0;
-      background: var(--color-orange-reddish);
-      box-shadow: $stripe-shadow;
-    }
-    .stripe-l {
-      height: 100%;
-      width: $width-l;
-      position: absolute;
-      top: 0;
-      right: calc($width-s + $space-1 + $width-m + $space-2);
-      background: var(--color-orange-faded);
-      box-shadow: $stripe-shadow;
-    }
+    .stripe-s,
+    .stripe-m,
+    .stripe-l,
     .stripe-xl {
       height: 100%;
-      width: calc($width-xl);
       position: absolute;
       top: 0;
+      box-shadow: $stripe-shadow;
+    }
+
+    .stripe-s {
+      width: $width-s;
+      right: 0;
+      background: var(--color-orange-bright);
+    }
+    .stripe-m {
+      width: $width-m;
+      right: calc($width-s + $space-1);
+      background: var(--color-orange-reddish);
+    }
+    .stripe-l {
+      width: $width-l;
+      right: calc($width-s + $space-1 + $width-m + $space-2);
+      background: var(--color-orange-faded);
+    }
+    .stripe-xl {
+      width: calc($width-xl);
       right: calc(
         $width-s + $space-1 + $width-m + $space-2 + $width-l + $space-3
       );
       background: var(--color-accent-1);
-      box-shadow: $stripe-shadow;
     }
   }
 
   &-decoration-right {
-    position: absolute;
     bottom: 0px;
     left: 78%;
     height: 300px;
-    transform-origin: left bottom;
-    transform: skew(-45deg);
+
+    .stripe-s,
+    .stripe-m,
+    .stripe-l,
+    .stripe-xl {
+      position: absolute;
+    }
 
     .stripe-s {
-      position: absolute;
       bottom: 0;
       left: 0;
       width: 8px;
@@ -86,7 +84,6 @@
       background: var(--color-accent-2);
     }
     .stripe-m {
-      position: absolute;
       bottom: 70px;
       left: 20px;
       width: 20px;
@@ -94,7 +91,6 @@
       background: var(--color-accent-3);
     }
     .stripe-l {
-      position: absolute;
       bottom: 0;
       left: 120px;
       width: 240px;
@@ -102,7 +98,6 @@
       background: var(--color-text-dark);
     }
     .stripe-xl {
-      position: absolute;
       bottom: 0;
       left: 60px;
       width: 200px;
@@ -138,6 +133,12 @@
         margin-inline: auto;
       }
     }
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .footer {
+    clip-path: var(--section-clippath-desktop-xl);
   }
 }
 

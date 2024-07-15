@@ -21,7 +21,7 @@ const HorizontalBarButton: FC<IHBarButton> = ({
   return (
     <div className={mainStyle}>
       <button onClick={() => setActive((state) => !state)} className={btnStyle}>
-        {active ? 'Свернуть' : value}
+        <div className={classes.tag}>{active ? 'Свернуть' : value}</div>
         <IconChevronDown className={styleChevron} />
       </button>
       <div className={classes.spacer}></div>

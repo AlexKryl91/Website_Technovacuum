@@ -32,6 +32,10 @@
 }
 
 .dark {
-  background: var(--color-accent-3);
+  background: var(--color-accent-1);
   color: var(--color-text-light);
+
+  &:hover {
+    background: var(--color-accent-3);
+  }
 }

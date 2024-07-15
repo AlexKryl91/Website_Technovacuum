@@ -1,0 +1,136 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: 999;
+  background: teal;
+  overflow: hidden;
+}
+
+// .slide {
+//   padding: 20px;
+
+//   .caption {
+//     margin: 0 0 20px;
+//     font-weight: 500;
+//     text-align: center;
+//     text-wrap: balance;
+//   }
+// }
+// .wrapper {
+//   display: flex;
+//   align-items: center;
+//   justify-content: flex-start;
+
+//   gap: 20px;
+
+//   .diagram {
+//     position: relative;
+//     width: 100%;
+//     max-width: 600px;
+//     margin: auto;
+
+//     // background: teal;
+
+//     svg {
+//       width: 100%;
+//       height: 410px;
+//     }
+//   }
+
+//   .text-content {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 20px 30px;
+
+//     margin: auto;
+//     font-size: 16px;
+//     line-height: 20px;
+
+//     .units,
+//     .flows {
+//       list-style: none;
+//     }
+//   }
+// }
+
+// .zoom-btn {
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   padding: 20px;
+//   width: 100%;
+//   height: 100%;
+//   background: none;
+
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   svg {
+//     max-width: 200px;
+//   }
+
+//   svg * {
+//     transition: all var(--transition-duration);
+//     opacity: 0;
+//   }
+
+//   &:hover {
+//     svg * {
+//       opacity: 1;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 1250px) {
+//   .wrapper {
+//     flex-wrap: wrap;
+
+//     .text-content {
+//       flex-direction: row;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 900px) {
+//   .wrapper {
+//     .diagram {
+//       svg {
+//         height: 300px;
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 750px) {
+//   .wrapper {
+//     .text-content {
+//       font-size: 14px;
+//       line-height: 18px;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 568px) {
+//   .wrapper {
+//     .diagram {
+//       background: var(--color-tr80-greyishblue);
+//       svg {
+//         height: 200px;
+//       }
+//     }
+
+//     .text-content {
+//       display: none;
+//     }
+//   }
+
+//   .zoom-btn {
+//     svg * {
+//       opacity: 1;
+//     }
+//   }
+// }

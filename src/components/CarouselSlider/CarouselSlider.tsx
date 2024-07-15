@@ -1,4 +1,4 @@
-import { ChangeEventHandler, FC, SyntheticEvent, useState } from 'react';
+import { FC, useState } from 'react';
 import * as classes from './CarouselSlider.module.scss';
 import IconArrow from '@/assets/icons/icon_arrow.svg';
 import { ICarousel } from '@/types/types';
@@ -24,13 +24,13 @@ const CarouselSlider: FC<ICarousel> = ({ slides, btn_label }) => {
     setCurrentIndex(Number(e.target.value));
   }
 
+  const slideWidth = `${100 / slides.length}%`;
+
   const sliderStyle = {
     height: '100%',
     width: `${slides.length * 100}%`,
-    left: `${currentIndex * -100}%`,
+    transform: `translateX(${currentIndex * (-100 / slides.length)}%)`,
   };
-
-  const slideWidth = `${100 / slides.length}%`;
 
   return (
     <div className={classes.carousel}>

@@ -115,7 +115,7 @@
 
 .active-wrapper {
   padding-top: 20px;
-  max-height: 3700px;
+  max-height: 6400px;
 }
 
 .pre-footer {
@@ -130,11 +130,9 @@
 @media screen and (max-width: 1278px) {
   .systems {
     &-item {
-      .item-wrapper {
-        .item-description {
-          text-align: center;
-          align-items: center;
-        }
+      .description {
+        text-align: center;
+        align-items: center;
       }
     }
   }
@@ -142,9 +140,22 @@
 
 // Common breakpoint ===>
 @media screen and (max-width: 992px) {
-  .solutions {
+  .main {
+    padding-top: var(--mobile-navbar-height);
+  }
+}
+
+// Common breakpoint ===>
+@media screen and (max-width: 568px) {
+  .main {
+    &-header {
+      font-size: 26px;
+    }
     .systems {
-      margin: var(--mobile-navbar-height) auto 120px;
+      &-item {
+        padding-inline: var(--mobile-side-spacing);
+        font-size: 16px;
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 import * as classes from './Solutions.module.scss';
 import { useContext, useState } from 'react';
-import { LangContext } from '@/context/context';
+import { LangContext, SlideContext } from '@/context/context';
 import ruTextContent from './ru.json';
 import enTextContent from './en.json';
 
@@ -10,27 +10,45 @@ import IconVacuum from '@/assets/icons/icon_vacuum.svg';
 import IconPressure from '@/assets/icons/icon_pressure.svg';
 import IconAbsorb from '@/assets/icons/icon_absorb.svg';
 
-import IconVHC from '@/assets/icons/icon_vhc.svg';
-import IconSTEAM from '@/assets/icons/icon_steam.svg';
-import IconJC from '@/assets/icons/icon_jc.svg';
-import IconJAU from '@/assets/icons/icon_jau.svg';
+import IconVhcRU from '@/assets/icons/icon_vhc_ru.svg';
+import IconSteamRU from '@/assets/icons/icon_steam_ru.svg';
+import IconJcRU from '@/assets/icons/icon_jc_ru.svg';
+import IconJauRU from '@/assets/icons/icon_jau_ru.svg';
+
+import IconVhcEN from '@/assets/icons/icon_vhc_en.svg';
+import IconSteamEN from '@/assets/icons/icon_steam_en.svg';
+import IconJcEN from '@/assets/icons/icon_jc_en.svg';
+import IconJauEN from '@/assets/icons/icon_jau_en.svg';
 
 import Subpage from './Subpage';
+import { ISlide } from '@/types/types';
+import allDiagrams from './DiagramsForSlides';
+import PopupSlide from '@/components/PopupSlide/PopupSlide';
 
 const Solutions = () => {
+  const [currentSlideProps, setCurrentSlideProps] = useState<boolean>(false);
+  console.log(currentSlideProps);
+
   const { lang } = useContext(LangContext);
   const content = lang === 'en' ? enTextContent : ruTextContent;
 
   const { header, systems, units, common } = content;
   const [systemVCU, systemJC, systemJAU] = systems;
 
+  units.forEach((unit, i) =>
+    unit.slides.forEach((slide: ISlide, j) => (slide.img = allDiagrams[i][j]))
+  );
+
+  const IconVHC = lang === 'en' ? IconVhcEN : IconVhcRU;
+  const IconSTEAM = lang === 'en' ? IconSteamEN : IconSteamRU;
+  const IconJC = lang === 'en' ? IconJcEN : IconJcRU;
+  const IconJAU = lang === 'en' ? IconJauEN : IconJauRU;
+
   const [stateVCU, setStateVCU] = useState<boolean>(false);
   const [subpageStateVHC, setSubpagesStateVHC] = useState<boolean>(false);
   const [subpageStateSTEAM, setSubpagesStateSTEAM] = useState<boolean>(false);
   const [stateJC, setStateJC] = useState<boolean>(false);
   const [stateJAU, setStateJAU] = useState<boolean>(false);
-
-  // УПРОСТИТЬ КОНКЕТЫ!!!
 
   const styleChevronVCU = classes.chevron.concat(
     stateVCU ? ` ${classes.open}` : ''
@@ -81,82 +99,85 @@ const Solutions = () => {
   ];
 
   return (
-    <main className={classes.main}>
-      <h1 className={classes['main-header']}>{header}</h1>
-      <ul className={classes['systems']}>
-        <li className={classes['systems-item']}>
-          <div className={classes.icon}>
-            <IconVacuum />
-          </div>
-          <div className={classes['item-wrapper']}>
-            <p className={classes.description}>
-              <strong>{systemVCU.strong}</strong>
-              {systemVCU.text}
-            </p>
-            <button
-              onClick={() => {
-                setStateVCU(!stateVCU);
-                setSubpagesStateVHC(stateVCU && subpageStateVHC);
-                setSubpagesStateSTEAM(stateVCU && subpageStateSTEAM);
-              }}
-              className={classes['expand-btn']}
-              type="button"
-            >
-              {stateVCU ? common.expand_btn[1] : common.expand_btn[0]}
-              <IconChevronDown className={styleChevronVCU} />
-            </button>
-          </div>
-        </li>
+    <SlideContext.Provider value={{ currentSlideProps, setCurrentSlideProps }}>
+      <main className={classes.main}>
+        <h1 className={classes['main-header']}>{header}</h1>
+        <ul className={classes['systems']}>
+          <li className={classes['systems-item']}>
+            <div className={classes.icon}>
+              <IconVacuum />
+            </div>
+            <div className={classes['item-wrapper']}>
+              <p className={classes.description}>
+                <strong>{systemVCU.strong}</strong>
+                {systemVCU.text}
+              </p>
+              <button
+                onClick={() => {
+                  setStateVCU(!stateVCU);
+                  setSubpagesStateVHC(stateVCU && subpageStateVHC);
+                  setSubpagesStateSTEAM(stateVCU && subpageStateSTEAM);
+                }}
+                className={classes['expand-btn']}
+                type="button"
+              >
+                {stateVCU ? common.expand_btn[1] : common.expand_btn[0]}
+                <IconChevronDown className={styleChevronVCU} />
+              </button>
+            </div>
+          </li>
 
-        <div className={styleWrapperVCU}>
-          <Subpage {...subpages[0]} />
-          <Subpage {...subpages[1]} />
-        </div>
+          <div className={styleWrapperVCU}>
+            <Subpage {...subpages[0]} />
+            <Subpage {...subpages[1]} />
+          </div>
 
-        <li className={classes['systems-item']}>
-          <div className={classes.icon}>
-            <IconPressure />
-          </div>
-          <div className={classes['item-wrapper']}>
-            <p className={classes.description}>
-              <strong>{systemJC.strong}</strong>
-              {systemJC.text}
-            </p>
-            <button
-              onClick={() => setStateJC(!stateJC)}
-              className={classes['expand-btn']}
-              type="button"
-            >
-              {stateJC ? common.expand_btn[1] : common.expand_btn[0]}
-              <IconChevronDown className={styleChevronJC} />
-            </button>
-          </div>
-        </li>
-        <Subpage {...subpages[2]} />
+          <li className={classes['systems-item']}>
+            <div className={classes.icon}>
+              <IconPressure />
+            </div>
+            <div className={classes['item-wrapper']}>
+              <p className={classes.description}>
+                <strong>{systemJC.strong}</strong>
+                {systemJC.text}
+              </p>
+              <button
+                onClick={() => setStateJC(!stateJC)}
+                className={classes['expand-btn']}
+                type="button"
+              >
+                {stateJC ? common.expand_btn[1] : common.expand_btn[0]}
+                <IconChevronDown className={styleChevronJC} />
+              </button>
+            </div>
+          </li>
+          <Subpage {...subpages[2]} />
 
-        <li className={classes['systems-item']}>
-          <div className={classes.icon}>
-            <IconAbsorb />
-          </div>
-          <div className={classes['item-wrapper']}>
-            <p className={classes.description}>
-              <strong>{systemJAU.strong}</strong>
-              {systemJAU.text}
-            </p>
-            <button
-              onClick={() => setStateJAU(!stateJAU)}
-              className={classes['expand-btn']}
-              type="button"
-            >
-              {stateJAU ? common.expand_btn[1] : common.expand_btn[0]}
-              <IconChevronDown className={styleChevronJAU} />
-            </button>
-          </div>
-        </li>
-        <Subpage {...subpages[3]} />
-      </ul>
-      <div className={classes['pre-footer']}></div>
-    </main>
+          <li className={classes['systems-item']}>
+            <div className={classes.icon}>
+              <IconAbsorb />
+            </div>
+            <div className={classes['item-wrapper']}>
+              <p className={classes.description}>
+                <strong>{systemJAU.strong}</strong>
+                {systemJAU.text}
+              </p>
+              <button
+                onClick={() => setStateJAU(!stateJAU)}
+                className={classes['expand-btn']}
+                type="button"
+              >
+                {stateJAU ? common.expand_btn[1] : common.expand_btn[0]}
+                <IconChevronDown className={styleChevronJAU} />
+              </button>
+            </div>
+          </li>
+          <Subpage {...subpages[3]} />
+        </ul>
+        <div className={classes['pre-footer']}></div>
+      </main>
+      <PopupSlide />
+    </SlideContext.Provider>
   );
 };
 

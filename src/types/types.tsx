@@ -1,4 +1,4 @@
-import { FC, SVGProps } from 'react';
+import { ReactNode } from 'react';
 // App state
 
 // Navbar Interface
@@ -76,7 +76,7 @@ interface IDiagramMap {
 
 export interface ISlide {
   id: number;
-  img: string;
+  img: ReactNode;
   img_alt: string;
   text: IDiagramMap;
   width?: string;
@@ -107,7 +107,7 @@ type TCommon = {
   slider_btn: string[];
 };
 
-interface ISubpageContent {
+export interface ISubpageContent {
   title: string;
   description: {
     strong: string;

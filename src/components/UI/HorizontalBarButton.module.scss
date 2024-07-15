@@ -24,8 +24,11 @@
   background: none;
   z-index: 1;
 
-  padding-left: 70px;
-  margin-block: auto;
+  padding-inline: 70px 40px;
+
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
 
   color: var(--color-text-light);
   font-size: 24px;
@@ -34,6 +37,11 @@
 
   &:hover ~ .spacer {
     height: 12px;
+  }
+
+  .tag {
+    width: fit-content;
+    min-width: 145px;
   }
 }
 
@@ -45,8 +53,9 @@
 
 .chevron {
   width: 24px;
+  min-width: 24px;
   height: 12px;
-  margin: 0 0 1px 14px;
+  margin-top: 1px;
   transition: all var(--transition-duration);
 
   &.open {
@@ -56,4 +65,28 @@
 
 .hidden {
   display: none;
+}
+
+@media screen and (max-width: 856px) {
+  .expand {
+    font-size: 20px;
+
+    &:hover ~ .spacer {
+      height: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 756px) {
+  .expand {
+    font-size: 16px;
+    padding-inline: 60px 40px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .expand {
+    column-gap: 200px;
+    padding-inline: 55px 40px;
+  }
 }

@@ -39,24 +39,15 @@
     overflow: hidden;
     background: #fff;
     width: 100%;
-    height: 450px;
     border-radius: var(--border-radius-large);
     box-shadow: 4px 0px 6px var(--color-shadow);
 
     .slider {
-      position: absolute;
-      top: 0;
-      left: 0;
+      position: relative;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       transition: all var(--transition-duration);
-
-      .slide {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-      }
     }
   }
 
