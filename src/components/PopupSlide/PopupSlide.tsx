@@ -1,26 +1,46 @@
 import * as classes from './PopupSlide.module.scss';
-import { FC, useContext } from 'react';
+import { useContext } from 'react';
 import { SlideContext } from '@/context/context';
 import IconClose from '@/assets/icons/icon_close.svg';
-
-// type TPopupSlide = null | '';
+import { TZoomedSlide } from '@/types/types';
 
 const PopupSlide = () => {
-  const { currentSlideProps, setCurrentSlideProps } = useContext(SlideContext);
-
+  const { zoomedSlideProps, setZoomedSlideProps } = useContext(SlideContext);
   const closeHandler = () => {
-    setCurrentSlideProps(false);
+    setZoomedSlideProps(null);
   };
+
+  const props: TZoomedSlide = zoomedSlideProps;
 
   return (
     <>
-      {currentSlideProps && (
-        <dialog className={classes.popup} open={true} role="dialog">
-          HELLO! I'M MODAL WINDOW!!!
-          <button onClick={closeHandler} type="button">
+      {props && (
+        <div className={classes.popup}>
+          <h4 className={classes.caption}>{props.text.caption}</h4>
+          <div className={classes.diagram} title={props.img_alt}>
+            {props.img}
+          </div>
+          <div className={classes['text-content']}>
+            <ul className={classes.units}>
+              {props.text.description.block1.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <ul className={classes.flows}>
+              {props.text.description.block2.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+
+          <button
+            className={classes['close-btn']}
+            onClick={closeHandler}
+            type="button"
+          >
             <IconClose />
           </button>
-        </dialog>
+        </div>
       )}
     </>
   );

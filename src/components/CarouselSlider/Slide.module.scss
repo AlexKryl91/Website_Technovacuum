@@ -104,11 +104,20 @@
 }
 
 @media screen and (max-width: 568px) {
+  .slide {
+    .caption {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
   .wrapper {
     .diagram {
       background: var(--color-tr80-greyishblue);
+      height: 135px;
+
       svg {
-        height: 200px;
+        height: 100%;
       }
     }
 

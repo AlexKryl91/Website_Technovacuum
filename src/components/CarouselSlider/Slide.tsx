@@ -4,10 +4,12 @@ import * as classes from './Slide.module.scss';
 import { ISlide } from '@/types/types';
 import IconZoom from '@/assets/icons/icon_zoom.svg';
 
-const Slide: FC<ISlide> = ({ img, img_alt, text, width }) => {
-  const { setCurrentSlideProps } = useContext(SlideContext);
+const Slide: FC<ISlide> = (props) => {
+  const { setZoomedSlideProps } = useContext(SlideContext);
 
-  const contextHandler = () => setCurrentSlideProps(true);
+  const contextHandler = () => setZoomedSlideProps(props);
+
+  const { img, img_alt, text, width } = props;
 
   return (
     <div className={classes.slide} style={{ width }}>
@@ -19,6 +21,7 @@ const Slide: FC<ISlide> = ({ img, img_alt, text, width }) => {
             onClick={contextHandler}
             className={classes['zoom-btn']}
             type="button"
+            aria-label="Click to enlarge"
           >
             <IconZoom />
           </button>

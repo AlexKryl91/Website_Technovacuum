@@ -21,13 +21,12 @@ import IconJcEN from '@/assets/icons/icon_jc_en.svg';
 import IconJauEN from '@/assets/icons/icon_jau_en.svg';
 
 import Subpage from './Subpage';
-import { ISlide } from '@/types/types';
+import { ISlide, TZoomedSlide } from '@/types/types';
 import allDiagrams from './DiagramsForSlides';
 import PopupSlide from '@/components/PopupSlide/PopupSlide';
 
 const Solutions = () => {
-  const [currentSlideProps, setCurrentSlideProps] = useState<boolean>(false);
-  console.log(currentSlideProps);
+  const [zoomedSlideProps, setZoomedSlideProps] = useState<TZoomedSlide>(null);
 
   const { lang } = useContext(LangContext);
   const content = lang === 'en' ? enTextContent : ruTextContent;
@@ -99,7 +98,7 @@ const Solutions = () => {
   ];
 
   return (
-    <SlideContext.Provider value={{ currentSlideProps, setCurrentSlideProps }}>
+    <SlideContext.Provider value={{ zoomedSlideProps, setZoomedSlideProps }}>
       <main className={classes.main}>
         <h1 className={classes['main-header']}>{header}</h1>
         <ul className={classes['systems']}>

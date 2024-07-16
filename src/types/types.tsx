@@ -87,6 +87,8 @@ export interface ICarousel {
   btn_label: string[];
 }
 
+export type TZoomedSlide = null | ISlide;
+
 // Dynamic Subpages Interface
 type TOperation = {
   title: string;
