@@ -1,45 +1,45 @@
 {
-  "header": "Разработки",
+  "header": "Solutions",
   "systems": [
     {
-      "strong": "Вакуумсоздающие системы",
-      "text": " (ВСС) предназначены для откачки газов, паров и парожидкостных смесей с целью создания вакуума в аппаратах различного назначения (разного рода колоннах, десорберах, испарителях, деаэраторах, реакторах и других)."
+      "strong": "Vacuum-creating units",
+      "text": " (VCU) are designed for pumping gases, vapors and vapor-liquid mixtures in order to create a vacuum in different devices and vessels (various columns, desorbers, evaporators, deaerators, reactors and others)."
     },
     {
-      "strong": "Струйные компрессоры",
-      "text": " (СК) предназначены для сжатия низконапорных газов, образующихся в ходе технологических процессов на различных предприятиях (например, нефтеперерабатывающих, нефтехимических, а также в ходе добычи нефти и газа)."
+      "strong": "Jet compressors",
+      "text": " (JC) are designed for compression low pressure gases generated in technological processes at various enterprises (for example, refinery, petrochemical and during oil and gas production)."
     },
     {
-      "strong": "Струйно-абсорбционные установки",
-      "text": " (САУ) предназначены для очистки газов дыхания (абгазов) от углеводородов и рекуперации паров нефти и нефтепродуктов на наливных эстакадах, терминалах и резервуарных парках."
+      "strong": "Jet absorption units",
+      "text": " (JAU) are designed for purification outlet gases (abgases) from hydrocarbons and recovery of oil and petroleum product vapors at loading racks, terminals and tank parks."
     }
   ],
   "units": [
     {
-      "title": "ВСС на базе ВГЦ-аппаратов",
+      "title": "VCU based on VHC devices",
       "description": {
-        "strong": "Вакуумные гидроциркуляционные (ВГЦ)",
-        "text": " аппараты являются альтернативой традиционным системам создания вакуума, таким как вакуумные насосы, паровые эжекторы и при определенных условиях имеют существенно лучшие показатели по стабильности работы и стоимости эксплуатации."
+        "strong": "Vacuum hydrocirculating (VHC)",
+        "text": " devices are an alternative for traditional vacuum creating systems such as vacuum pumps and steam ejectors, and under certain conditions they have significantly better performance in terms of operational stability and operating costs."
       },
       "slides": [
         {
           "id": 1,
           "img": "",
-          "img_alt": "Одноступенчатая ВСС с ВГЦ-аппаратом",
+          "img_alt": "Single-stage VCU with VHC device",
           "text": {
-            "caption": "Схема одноступенчатой ВСС",
+            "caption": "Diagram of a single-stage VCU with VHC device",
             "description": {
               "block1": [
-                "1 – ВГЦ-аппарат",
-                "2 – Сепаратор",
-                "3 – Холодильник",
-                "4 – Насос"
+                "1 – VHC device",
+                "2 – Separator",
+                "3 – Heat exchanger",
+                "4 – Pump"
               ],
               "block2": [
-                "I – Откачиваемая парогазовая смесь",
-                "II – Отвод сжатого газа",
-                "III – Отвод избытка рабочей жидкости",
-                "IV – Подпитка свежей рабочей жидкостью"
+                "I – Pumped-out gas-vapor mixture",
+                "II – Compressed gas outlet",
+                "III – Excess work fluid outlet",
+                "IV – Replenishment with fresh working fluid"
               ]
             }
           }
@@ -47,21 +47,21 @@
         {
           "id": 2,
           "img": "",
-          "img_alt": "Двухступенчатая ВСС с ВГЦ-аппаратами",
+          "img_alt": "Two-stage VCU with VHC devices",
           "text": {
-            "caption": "Схема двухступенчатой ВСС",
+            "caption": "Diagram of a two-stage VCU",
             "description": {
               "block1": [
-                "1, 2 – ВГЦ-аппараты",
-                "3, 4 – Сепараторы",
-                "5 – Теплообменник",
-                "6 – Насос"
+                "1, 2 – VHC devices",
+                "3, 4 – Separators",
+                "5 – Heat exchanger",
+                "6 – Pump"
               ],
               "block2": [
-                "I – Откачиваемая парогазовая смесь",
-                "II – Отвод сжатого газа",
-                "III – Отвод избытка рабочей жидкости",
-                "IV – Подпитка свежей рабочей жидкостью"
+                "I – Pumped-out gas-vapor mixture",
+                "II – Compressed gas outlet",
+                "III – Excess work fluid outlet",
+                "IV – Replenishment with fresh working fluid"
               ]
             }
           }
@@ -69,25 +69,25 @@
         {
           "id": 3,
           "img": "",
-          "img_alt": "Двухступенчатая ВСС с ВГЦ-аппаратами с очисткой сжатого газа",
+          "img_alt": "Two-stage VCU with VHC devices and compressed gas purification",
           "text": {
-            "caption": "Схема двухступенчатой ВСС с очисткой сжатого газа",
+            "caption": "Diagram of a two-stage VCU with compressed gas purification",
             "description": {
               "block1": [
-                "1 – ВГЦ-аппарат",
-                "2 – Струйный компрессор",
-                "3, 4 – Сепараторы",
-                "5, 6 – Теплообменники",
-                "7, 8 – Насосы"
+                "1 – VHC device",
+                "2 – Jet compressor",
+                "3, 4 – Separators",
+                "5, 6 – Heat exchangers",
+                "7, 8 – Pumps"
               ],
               "block2": [
-                "I – Откачиваемая парогазовая смесь",
-                "II – Газы, поступающие на сжатие и очистку",
-                "III – Отвод сжатого и очищенного газа",
-                "IV – Отвод избытка рабочей жидкости",
-                "V – Подпитка свежей рабочей жидкостью",
-                "VI – Отвод сорбента",
-                "VII – Подвод свежего сорбента"
+                "I – Pumped-out gas-vapor mixture",
+                "II – Gases supplied for compression and purification",
+                "III – Compressed and purified gas outlet",
+                "IV – Excess work fluid outlet",
+                "V – Replenishment with fresh working fluid",
+                "VI – Sorbent outlet",
+                "VII – Replenishment with fresh sorbent"
               ]
             }
           }
@@ -95,28 +95,28 @@
         {
           "id": 4,
           "img": "",
-          "img_alt": "Двухступенчатая ВСС с ВГЦ-аппаратами с регенерацией рабочей жидкости и очисткой сжатого газа",
+          "img_alt": "Two-stage VCU with VHC devices and work fluid regeneration and compressed gas purification",
           "text": {
-            "caption": "Схема двухступенчатой ВСС с регенерацией рабочей жидкости и очисткой сжатого газа",
+            "caption": "Diagram of two-stage VCU with work fluid regeneration and compressed gas purification",
             "description": {
               "block1": [
-                "1 – Вакуумный конденсатор",
-                "2 – ВГЦ-аппарат",
-                "3 – Струйный компрессор",
-                "4, 5 – Сепараторы",
-                "6 – Барометрическая ёмкость",
-                "7, 8, 9, 10, 11 – Насосы",
-                "12, 13 – Теплообменники",
-                "14 – Десорбер",
-                "15 – Абсорбер"
+                "1 – Vacuum condenser",
+                "2 – VHC device",
+                "3 – Jet compressor",
+                "4, 5 – Separators",
+                "6 – Barometric vessel",
+                "7, 8, 9, 10, 11 – Pumps",
+                "12, 13 – Heat exchangers",
+                "14 – Desorber",
+                "15 – Absorber"
               ],
               "block2": [
-                "I – Откачиваемая парогазовая смесь",
-                "II – Отвод сжатого и очищенного газа",
-                "III – Подвод раствора МДЭА",
-                "IV – Отвод раствора МДЭА на регенерацию",
-                "V – Подпитка свежей рабочей жидкостью",
-                "VI – Отвод избытка рабочей жидкости"
+                "I – Pumped-out gas-vapor mixture",
+                "II – Compressed and purified gas outlet",
+                "III – MDEA-solution inlet",
+                "IV – Outlet of MDEA solution for regeneration",
+                "V – Replenishment with fresh working fluid",
+                "VI – Excess work fluid outlet"
               ]
             }
           }
@@ -124,29 +124,29 @@
         {
           "id": 5,
           "img": "",
-          "img_alt": "Одноступенчатая ВСС с ВГЦ-аппаратом с холодильной машиной",
+          "img_alt": "Single-stage VCU with VHC device and chiller",
           "text": {
-            "caption": "Схема одноступенчатой ВСС с холодильной машиной",
+            "caption": "Diagram of a single-stage VCU with chiller",
             "description": {
               "block1": [
-                "1 – Вакуумный конденсатор",
-                "2 – Барометрическая ёмкость",
-                "3 – Холодильная машина",
-                "4 – ВГЦ-аппарат",
-                "5 – Сепаратор",
-                "6 – Теплообменник",
-                "7 – Насос"
+                "1 – Vacuum condenser",
+                "2 – Barometric vessel",
+                "3 – Chiller",
+                "4 – VHC device",
+                "5 – Separator",
+                "6 – Heat exchanger",
+                "7 – Pump"
               ],
               "block2": [
-                "I – Откачиваемая парогазовая смесь",
-                "II – Контур захоложенной воды",
-                "III – Вход оборотной воды",
-                "IV – Выход обротной воды",
-                "V – Отвод конденсата",
-                "VI – Откачиваемая газовая смесь",
-                "VII – Отвод сжатого газа",
-                "VIII – Подпитка свежей рабочей жидкостью",
-                "IX – Отвод избытка рабочей жидкости"
+                "I – Pumped-out gas-vapor mixture",
+                "II – Chilled water circuit",
+                "III – Circulating water inlet",
+                "IV – Circulating water outlet",
+                "V – Condensate outlet",
+                "VI – Pumped-out gas mixture",
+                "VII – Compressed gas outlet",
+                "VIII – Replenishment with fresh working fluid",
+                "IX – Excess work fluid outlet"
               ]
             }
           }
@@ -154,32 +154,32 @@
         {
           "id": 6,
           "img": "",
-          "img_alt": "Двухступенчатая ВСС с паровым эжектором и ВГЦ-аппаратом",
+          "img_alt": "Two-stage VCU with steam ejector and VHC device",
           "text": {
-            "caption": "Схема двухступенчатой ВСС с паровым эжектором и ВГЦ-аппаратом",
+            "caption": "Diagram of a two-stage VCU with steam ejector and VHC device",
             "description": {
               "block1": [
-                "1 – Атмосферная колонна",
-                "2 – Вакуумная колонна",
-                "3 – Парогенератор",
-                "4 – Паровой эжектор",
-                "5 – Вакуумный конденсатор",
-                "6, 10 – Сепараторы",
-                "7, 8, 12 – Насосы",
-                "9 – ВГЦ-аппарат",
-                "11 – Теплообменник"
+                "1 – Atmospheric column",
+                "2 – Vacuum column",
+                "3 – Steam generator",
+                "4 – Steam ejector",
+                "5 – Vacuum condenser",
+                "6, 10 – Separators",
+                "7, 8, 12 – Pumps",
+                "9 – VHC device",
+                "11 – Heat exchanger"
               ],
               "block2": [
-                "I – Откачиваемая парогазовая смесь",
-                "II, III – Подводы теплоносителя",
-                "IV – Вывод теплоносителя",
-                "V – Водяной пар",
-                "VI – Парогазовая смесь",
-                "VII – Вывод водяного конденсата",
-                "VIII – Вывод углеводородного конденсата",
-                "IX – Отвод сжатого газа",
-                "X – Отвод избытка рабочей жидкости",
-                "XI – Подпитка свежей рабочей жидкостью"
+                "I – Pumped-out gas-vapor mixture",
+                "II, III – Hot streams inlets",
+                "IV – Hot streams outputs",
+                "V – Steam",
+                "VI – Gas-vapor mixture",
+                "VII – Water condensate outlet",
+                "VIII – Hydrocarbon condensate outlet",
+                "IX – Compressed gas outlet",
+                "X – Excess work fluid outlet",
+                "XI – Replenishment with fresh working fluid"
               ]
             }
           }
@@ -187,79 +187,80 @@
       ],
       "operation": [
         {
-          "title": "Принцип работы (на примере одноступенчатой ВСС)",
+          "title": "Operating principle (the example of a single-stage VCU)",
           "blocks": [
-            "Откачиваемая среда из технологического аппарата направляется на вход ВГЦ-аппарата 1. В нём происходит сжатие парогаза за счет энергии струи рабочей жидкости, подаваемой в аппарат 1 насосом 4. В качестве рабочей жидкости может быть использован один из технологических потоков установки, который допустимо смешивать с откачиваемыми парами (например, в нефтепереработке используется дизельная фракция или газойль).",
-            "Из ВГЦ-аппарата 1 образовавшаяся жидкостно-газовая смесь попадает в сепаратор 2, где происходит разделение газа и жидкости. Сжатый до требуемого давления газ направляется для дальнейшего использования или утилизации. Рабочая жидкость после отвода избытка тепла в холодильнике 3 снова подается насосом 4 в ВГЦ-аппарат 1. При необходимости обновления рабочей жидкости осуществляется подпитка и отвод балансового избытка из системы."
+            "The pumped-out media from technological device is supplied to the inlet of VHC device 1. Here the vapor-gas mixture is compressed due to the energy of working fluid jet supplied to device 1 by pump 4. One of the process streams of the unit can be used as a working fluid, which can be mixed with pumped vapors (for example, diesel fraction and gasoil are used in refinery).",
+
+            "The resulting liquid-gas mixture flows from VHC device 1 into separator 2, where gas and liquid are separated. Compressed to required pressure gas is supplied for further use or disposal. After cooling in heat exchanger 3, the working fluid is again supplied to the VHC device 1 by pump 4. If it is necessary to refresh the working fluid, it is replenished and the balance excess is removed from the system."
           ]
         }
       ],
       "features": [
         {
-          "title": "Ключевые преимущества ВГЦ-аппарата:",
+          "title": "Key advantages of VHC device:",
           "list": [
             {
               "id": "adv#1",
-              "item": "Одновременно со сжатием парогаза происходит процесс конденсации паров на струе рабочей жидкости, что делает аппарат энергетически выгодным, особенно при откачивании парогазовых смесей с большим процентным содержанием пара"
+              "item": "Simultaneously with the compression of the vapor-gas, the process of vapor condensation occurs on the jet of working fluid, which makes the device energy-efficient, especially when pumping out vapor-gas mixtures with a high percentage of vapor"
             },
             {
               "id": "adv#2",
-              "item": "Повышение экологичности установки за счет существенного уменьшения сбросов тепловой энергии в окружающую среду и загрязненных стоков воды, нуждающихся в очистке"
+              "item": "Increasing the environmental friendliness of the unit due to a significant reduction in thermal energy emissions into the environment and contaminated wastewater that needs treatment"
             },
             {
               "id": "adv#3",
-              "item": "Экономия за счет снижения затрат на потребление энергоресурсов (водяного пара и охлаждающей воды)"
+              "item": "Savings due to reduced energy consumption costs (steam and cooling water)"
             },
             {
               "id": "adv#4",
-              "item": "Сокращение потерь ценных продуктов с конденсатом водяного пара"
+              "item": "Reducing losses of valuable products with steam condensate"
             },
             {
               "id": "adv#5",
-              "item": "Отсутствие проблем, связанных с ухудшением работы конденсаторов и теплообменного оборудования"
+              "item": "No problems associated with deterioration of condensers and heat exchange equipment"
             },
             {
               "id": "adv#6",
-              "item": "Низкая чувствительность к наличию в откачиваемой среде жидких и твердых частиц"
+              "item": "Low sensitivity to the presence of liquid and solid particles in the pumped medium"
             },
             {
               "id": "adv#7",
-              "item": "Высокая надежность и взрывопожаробезопасность"
+              "item": "High reliability and fire and explosion safety"
             },
             {
               "id": "adv#8",
-              "item": "Легко внедряется на существующие установки"
+              "item": "Easily implemented into existing units"
             },
-            { "id": "adv#9", "item": "Бесшумность работы" }
+            { "id": "adv#9", "item": "Quiet operation" }
           ]
         }
       ],
-      "state_btn": ["На базе ВГЦ-аппаратов", "Свернуть"]
+      "state_btn": ["Based on VHC devices", "Minimize"]
     },
     {
-      "title": "ВСС на базе паровых эжекторов",
+      "title": "VCU based on steam ejectors",
       "description": {
-        "strong": "Паровые эжекторы",
-        "text": " применяются в системах создания вакуума уже около двух столетий. В силу технических характеристик этих аппаратов, чаще всего применяются многоступенчатые парогазовые вакуумсоздающие системы с межступенчатыми поверхностными конденсаторами."
+        "strong": "Steam ejectors",
+        "text": " have been used in vacuum creating units for about two centuries. Due to their technical characteristics, multi-stage steam vacuum creating units with interstage surface condensers are most often used."
       },
       "slides": [
         {
           "id": 1,
           "img": "",
-          "img_alt": "Трёхступенчатая паровая ВСС",
+          "img_alt": "Three-stage steam VCU",
           "text": {
-            "caption": "Схема трёхступенчатой ВСС с паровыми эжекторами",
+            "caption": "Diagram of a three-stage VCU with steam ejectors",
             "description": {
               "block1": [
-                "1, 2, 3 – Паровые эжекторы",
-                "4, 5, 6 – Конденсаторы",
-                "7 – Сепаратор"
+                "1, 2, 3 – Steam ejectors",
+                "4, 5, 6 – Condensers",
+                "7 – Separators"
               ],
               "block2": [
-                "I – Откачиваемая парогазовая смесь",
-                "II – Линия подвода перегретого пара",
-                "III – Линия отвода сжатого газа",
-                "IV – Линия отвода конденсата"
+                "I – Pumped-out gas-vapor mixture",
+                "II – Superheated steam inlet",
+                "III – Compressed gas outlet",
+                "IV – Condensate outlet"
               ]
             }
           }
@@ -267,32 +268,32 @@
         {
           "id": 2,
           "img": "",
-          "img_alt": "Двухступенчатая ВСС с паровым эжектором и ВГЦ-аппаратом",
+          "img_alt": "Two-stage VCU with steam ejector and VHC device",
           "text": {
-            "caption": "Схема двухступенчатой ВСС с паровым эжектором и ВГЦ-аппаратом",
+            "caption": "Diagram of a two-stage VCU with steam ejector and VHC device",
             "description": {
               "block1": [
-                "1 – Атмосферная колонна",
-                "2 – Вакуумная колонна",
-                "3 – Парогенератор",
-                "4 – Паровой эжектор",
-                "5 – Вакуумный конденсатор",
-                "6, 10 – Сепараторы",
-                "7, 8, 12 – Насосы",
-                "9 – ВГЦ-аппарат",
-                "11 – Теплообменник"
+                "1 – Atmospheric column",
+                "2 – Vacuum column",
+                "3 – Steam generator",
+                "4 – Steam ejector",
+                "5 – Vacuum condenser",
+                "6, 10 – Separators",
+                "7, 8, 12 – Pumps",
+                "9 – VHC device",
+                "11 – Heat exchanger"
               ],
               "block2": [
-                "I – Откачиваемая парогазовая смесь",
-                "II, III – Подводы теплоносителя",
-                "IV – Вывод теплоносителя",
-                "V – Водяной пар",
-                "VI – Парогазовая смесь",
-                "VII – Вывод водяного конденсата",
-                "VIII – Вывод углеводородного конденсата",
-                "IX – Отвод сжатого газа",
-                "X – Отвод избытка рабочей жидкости",
-                "XI – Подпитка свежей рабочей жидкостью"
+                "I – Pumped-out gas-vapor mixture",
+                "II, III – Hot streams inlets",
+                "IV – Hot streams outlets",
+                "V – Steam",
+                "VI – Gas-vapor mixture",
+                "VII – Water condensate outlet",
+                "VIII – Hydrocarbon condensate outlet",
+                "IX – Compressed gas outlet",
+                "X – Excess work fluid outlet",
+                "XI – Replenishment with fresh working fluid"
               ]
             }
           }
@@ -300,85 +301,85 @@
       ],
       "operation": [
         {
-          "title": "Принцип работы",
+          "title": "Operating principle",
           "blocks": [
-            "Откачиваемая среда из технологического аппарата направляется на вход парового эжектора 1. Перемещение и сжатие парогаза происходит за счет энергии струи перегретого водяного пара, подаваемого в эжектор по линии II. После парового эжектора 1 образовавшаяся парогазовая смесь попадает в конденсатор 4, где происходит охлаждение и образование конденсата.",
-            "Сжатый до требуемого давления парогаз после конденсатора направляется аналогичным образом на вход парового эжектора следующей ступени. Количество ступеней определяется диапазоном требуемого остаточного давления откачки и давления сжатия на выходе системы.",
-            "Конденсат со всей ВСС направляется в сепаратор 7 для разделения жидкостей и их дальнейшего использования или утилизации."
+            "The pumped-out media from technological device is supplied to the inlet of steam ejector 1. The movement and compression of the vapor-gas mixture occurs due to the energy of superheated steam jet supplied to the ejector 1 by stream II. After steam ejector 1 the resulting vapor-gas mixture enters the condenser 4, where cooling and condensation occurs.",
+            "In the same way compressed to the the required pressure vapor-gas mixture is supplied to the inlet of the next stage steam ejector. Number of stages is defined by the range of the required absolute pump-out pressure and compression pressure at the unit outlet.",
+            "Condensate from the entire VCU is sent to separator 7 for liquids separation and their further use or disposal."
           ]
         }
       ],
       "features": [
         {
-          "title": "Ключевые преимущества паровых эжекторов:",
+          "title": "Key advantages of steam ejectors:",
           "list": [
             {
               "id": "adv#1",
-              "item": "Огромная область применения за счет физических и химических свойств водяного пара"
+              "item": "Huge range of applications due to the physical and chemical properties of water vapor"
             },
             {
               "id": "adv#2",
-              "item": "Почти неограниченная производительность по откачиваемому газу"
+              "item": "Almost unlimited pumping gas capacity"
             },
             {
               "id": "adv#3",
-              "item": "Конструктивная простота и надежность"
+              "item": "Constructive simplicity and reliability"
             },
             {
               "id": "adv#4",
-              "item": "Высокая взрывопожаробезопасность"
+              "item": "High fire and explosion safety"
             }
           ]
         },
         {
-          "title": "Недостатки относительно ВГЦ-аппаратов:",
+          "title": "Disadvantages compared to VHC devices:",
           "list": [
             {
               "id": "dis#1",
-              "item": "Существенное потребление энергии и водных ресурсов для генерации пара и конденсационного оборудования"
+              "item": "Significant energy and water consumption for steam generation and condensing equipment"
             },
             {
               "id": "dis#2",
-              "item": "Сильная зависимость / чувствительность работы ВСС от эффективности работы и состояния конденсаторов"
+              "item": "Strong dependence of the VCU operation on the operating efficiency and condition of the condensers"
             },
             {
               "id": "dis#3",
-              "item": "Загрязнение большого объёма водяного конденсата компонентами откачиваемой среды"
+              "item": "Contamination of a large volume of water condensate with components of the pumped medium"
             },
             {
               "id": "dis#4",
-              "item": "Высокий уровень шума"
+              "item": "High noise level"
             }
           ]
         }
       ],
-      "state_btn": ["На базе паровых эжекторов", "Свернуть"]
+      "state_btn": ["Based on steam ejectors", "Minimize"]
     },
     {
-      "title": "Струйные компрессоры",
+      "title": "Jet compressors",
       "description": {
-        "strong": "Струйные компрессоры (СК)",
-        "text": " применяются для сжатия низконапорных газов, для чего используется потенциальная энергия высоконапорных газовых, жидкостных или двухфазных потоков, которые имеются в существующих технологических процессах. В следствие этого СК находят применение во многих отраслях промышленности – в нефтехимии, нефтепереработке, добыче нефти и газа, металлургии, в бумажной промышленности, текстильной, пищевой, в тепловой и атомной энергетике, в космической и глубоководной технике и других."
+        "strong": "Jet compressors (JC)",
+        "text": " are used to compress low pressure gases. For this purpose the potential energy of gas, liquid or two-phase high pressure streams that are available in existing technologcal processes is used. As a result, JC are used in many industries – in petrochemistry, oil refinery, oil and gas production, metallurgy, paper industry, textile, food, thermal and nuclear energy, space and deep-sea technology and others."
       },
       "slides": [
         {
           "id": 1,
           "img": "",
-          "img_alt": "Установка на базе жидкостного струйного компрессора",
+          "img_alt": "Unit based on liquid jet compressor",
           "text": {
-            "caption": "Схема установки на базе жидкостного СК",
+            "caption": "Diagram of a unit based on liquid JC",
             "description": {
               "block1": [
-                "1 – Жидкостный СК",
-                "2 – Сепаратор",
-                "3 – Теплообменник",
-                "4 – Насос"
+                "1 – Liquid JC",
+                "2 – Separator",
+                "3 – Heat exchanger",
+                "4 – Pump"
               ],
               "block2": [
-                "I – Газ низкого давления",
-                "II – Линия отвода сжатого газа",
-                "III – Избыток рабочей жидкости",
-                "IV – Подпитка рабочей жидкости"
+                "I – Low pressure gas",
+                "II – Compressed gas outlet",
+                "III – Excess work fluid outlet",
+                "IV – Replenishment with fresh working fluid"
               ]
             }
           }
@@ -386,15 +387,15 @@
         {
           "id": 2,
           "img": "",
-          "img_alt": "Принципиальная схема парогазового СК",
+          "img_alt": "Schematic diagram of a steam-gas JC",
           "text": {
-            "caption": "Принципиальная схема парогазового СК",
+            "caption": "Schematic diagram of a steam-gas JC",
             "description": {
-              "block1": ["1 – Сопло", "2 – Камера смешения", "3 – Диффузор"],
+              "block1": ["1 – Nozzle", "2 – Mixing chamber", "3 – Diffuser"],
               "block2": [
-                "I – Высоконапорный газ",
-                "II – Низконапорный газ",
-                "III – Выход смеси"
+                "I – High pressure gas",
+                "II – Low pressure gas",
+                "III – Mix outlet"
               ]
             }
           }
@@ -402,100 +403,100 @@
       ],
       "operation": [
         {
-          "title": "Принцип работы установки на базе жидкостного СК",
+          "title": "Operating principle of the unit based on liquid JC",
           "blocks": [
-            "Сжимаемый низконапорный газ направляется на вход СК 1. В нём происходит сжатие газа за счет энергии струи рабочей жидкости, подаваемой в аппарат 1 насосом 4. В качестве рабочей жидкости может быть использован один из технологических потоков установки, который допустимо смешивать с откачиваемой средой.",
-            "Из СК образовавшаяся жидкостно-газовая смесь попадает в сепаратор 2, где происходит разделение газа и жидкости. Сжатый до требуемого давления газ направляется для дальнейшего использования или утилизации. Рабочая жидкость после отвода избытка тепла в холодильнике 3 снова подается насосом 4 в СК 1. При необходимости обновления рабочей жидкости осуществляется подпитка и отвод балансового избытка из системы.",
-            "В случае переменного расхода сжимаемого газа к одному сепаратору подключается несколько СК и насосов рабочей жидкости. Таким образом, регулирование производительности установки можно производить автоматическим включением или выключением насосов и СК. Данный подход позволяет эффективно реагировать на изменение расхода газового потока и отказаться от использования газгольдеров."
+            "The low pressure gas to be compressed is supplied to the inlet of JC 1. The gas compression occurs in it due to the energy of working fluid jet supplied to the device 1 by pump 4. One of the process streams of the unit can be used as a working fluid, which can be mixed with pumped media.",
+            "The resulting liquid-gas mixture flows from JC into separator 2, where gas and liquid are separated. Compressed to required pressure gas is supplied for further use or disposal. After cooling in heat exchanger 3, the working fluid is again supplied to the JC 1 by pump 4. If it is necessary to refresh the working fluid, it is replenished and the balance excess is removed from the system.",
+            "In the case of variable compressed gas flowrate, several JC and working fluid pumps are connected to one separator. Thus, the performance of the unit can be controlled by automatically turning on or off the pumps and JC. This approach allows you to effectively respond to changes in gas flowrate and eliminate the use of gas tanks."
           ]
         },
         {
-          "title": "Принцип работы парогазового СК",
+          "title": "Operating principle of the vapor-gas JC",
           "blocks": [
-            "Парогазовые СК относятся к классу газовых эжекторов, в проточном канале которых происходит смешение двух струй, сопровождающееся увеличением давления низконапорного (пассивного) газа за счёт энергии высоконапорного (активного) газового потока.",
-            "В качестве рабочих сред могут использоваться водяной пар, углеводородные газовые смеси и любые другие газообразные вещества. В связи с этим СК данного типа широко распространены и используются в нефтегазовой, химической, металлургической, энергетической, бумажной, пищевой и других отраслях промышленности."
+            "Vapor-gas JC belong to the class of gas ejectors, in the flow channel of which two jets are mixed, accompanied by an increase in the pressure of the low-pressure (passive) gas due to the energy of the high-pressure (active) gas flow.",
+            "Steam, mixtures of hydrocarbon gases and any other gaseous media can be used as working fluid. In this regard, JC of this type are widespread and used in the oil and gas, chemical, metallurgical, energy, paper, food and other industries."
           ]
         }
       ],
       "features": [
         {
-          "title": "Ключевые преимущества жидкостных СК:",
+          "title": "Key advantages of liquid JC:",
           "list": [
             {
               "id": "liq#1",
-              "item": "Значительный экономический эффект при сжатии газов, абсорбирующихся рабочей жидкостью. Одновременно со сжатием происходит процесс абсорбции паров на струе рабочей жидкости, что позволяет увеличить выход целевых продуктов и повысить эффективность СК"
+              "item": "Significant economic effect when compressing gases absorbed by the working fluid. Simultaneously with compression, the process of vapour absorption on the jet of working fluid occurs, which makes it possible to increase the yield of target products and increase the efficiency of JC"
             },
             {
               "id": "liq#2",
-              "item": "Возможность селективной очистки сжимаемых газов с помощью специально подобранной рабочей жидкости, выступающей в качестве абсорбента (например, моноэтаноламин, диэтиленгликоль, нефтяная фракция и проч.)"
+              "item": "Possibility of selective purification of compressible gases using a specially selected working fluid acting as an absorbent (for example, monoethanolamine, diethylene glycol, petroleum fraction, etc.)"
             },
             {
               "id": "liq#3",
-              "item": "Отсутствие необходимости в специально оборудованных помещениях и размещение на открытой площадке"
+              "item": "No need for specially equipped premises and possibility of placement in an open area"
             },
             {
               "id": "liq#4",
-              "item": "Низкая чувствительность к наличию в откачиваемой среде жидких и твердых частиц"
+              "item": "Low sensitivity to the presence of liquid and solid particles in the pumped medium"
             },
             {
               "id": "liq#5",
-              "item": "Высокая надежность и взрывопожаробезопасность"
+              "item": "High reliability and fire and explosion safety"
             }
           ]
         },
         {
-          "title": "Ключевые преимущества парогазовых СК:",
+          "title": "Key advantages of vapor-gas JC:",
           "list": [
             {
               "id": "gas#1",
-              "item": "Способность работать в широком диапазоне расходов и других параметров смешиваемых газовых потоков "
+              "item": "Ability to operate over a wide range of flow rates and other parameters of mixed gas streams"
             },
             {
               "id": "gas#2",
-              "item": "Огромная область применения за счет универсальности и вариативности рабочих сред"
+              "item": "Huge range of applications due to the versatility and variety of working fluids"
             },
             {
               "id": "gas#3",
-              "item": "Конструктивная простота и надежность"
+              "item": "Constructive simplicity and reliability"
             },
             {
               "id": "gas#4",
-              "item": "Высокая взрывопожаробезопасность"
+              "item": "High fire and explosion safety"
             }
           ]
         }
       ],
-      "state_btn": ["", "Свернуть"]
+      "state_btn": ["", "Minimize"]
     },
     {
-      "title": "Струйно-абсорбционные установки",
+      "title": "Jet absorption units",
       "description": {
         "strong": "",
-        "text": "На сегодняшний день существует много различных методов снижения потерь нефтепродуктов с газами дыхания, и именно системы улавливания легких углеводородных фракций считаются наиболее перспективными, ведь они позволяют радикально повысить экологичность и экономичность всех технологических операций, связанных с приемом, хранением и перемещением нефти и нефтепродуктов.",
-        "end_text": "Мы предлагаем нашу разработку на базе струйных систем – ",
-        "end_strong": "струйно-абсорбционную установку (САУ)."
+        "text": "Today there are a many different methods for reducing the loss of petroleum products with outlet gases. It is systems for recovery of light hydrocarbon fractions that are considered the most promising, cause they can radically improve environmental friendliness and efficiency of all technological operations associated with the reception, storage and transportation of oil and petroleum products.",
+        "end_text": "We offer our solution based on jet devices – ",
+        "end_strong": "jet absorption unit (JAU)."
       },
       "slides": [
         {
           "id": 1,
           "img": "",
-          "img_alt": "Схема струйно-абсорбционной установки",
+          "img_alt": "Diagram of a jet absorption unit",
           "text": {
-            "caption": "Схема САУ",
+            "caption": "Diagram of a JAU",
             "description": {
               "block1": [
-                "1 – Жидкостно-газовый струйный аппарат",
-                "2 – Сепаратор",
-                "3 – Теплообменник (в случае необходимости)",
-                "4 – Насос",
-                "5 – Абсорбер",
-                "6 – Узел захолаживания"
+                "1 – Liquid-gas jet device",
+                "2 – Separator",
+                "3 – Heat exchanger (if required)",
+                "4 – Pump",
+                "5 – Absorber",
+                "6 – Cooling unit"
               ],
               "block2": [
-                "I – Паровоздушная смесь",
-                "II – Очищенный воздух",
-                "III – Свежая рабочая жидкость",
-                "IV – Избыток рабочей жидкости"
+                "I – Vapor-air mixture inlet",
+                "II – Purified air outlet",
+                "III – Fresh work fluid inlet",
+                "IV – Excess work fluid outlet"
               ]
             }
           }
@@ -503,24 +504,24 @@
         {
           "id": 2,
           "img": "",
-          "img_alt": "Схема струйно-абсорбционной установки для рекуперации паров нефти",
+          "img_alt": "Diagram of a jet absorption unit for oil vapor recovery",
           "text": {
-            "caption": "Схема САУ для рекуперации паров нефти",
+            "caption": "Diagram of a JAU for oil vapor recovery",
             "description": {
               "block1": [
-                "1 – Эстакада налива нефти",
-                "2, 3, 4 – Струйные аппараты",
-                "5, 6, 7 – Сепараторы",
-                "8, 9, 10, 13 – Насосы",
-                "11 – Теплообменник",
-                "12 – Десорбер",
-                "14 – Резервуары"
+                "1 – Oil loading rack",
+                "2, 3, 4 – Jet devices",
+                "5, 6, 7 – Separators",
+                "8, 9, 10, 13 – Pumps",
+                "11 – Heat exchanger",
+                "12 – Desorber",
+                "14 – Tanks"
               ],
               "block2": [
-                "I – Абгазы с эстакады налива",
-                "II – Подпитка свежей нефтью",
-                "III – Вывод избытка нефти",
-                "IV – Очищенный газ"
+                "I – Abgases from loading rack",
+                "II – Fresh oil replenishment",
+                "III – Excess oil outlet",
+                "IV – Purified gas"
               ]
             }
           }
@@ -528,26 +529,35 @@
       ],
       "operation": [
         {
-          "title": "Принцип работы САУ для эстакад налива бензина",
+          "title": "Operating principle of the JAU for gasoline loading racks",
           "blocks": [
-            "Паровоздушная смесь I с эстакады налива бензина подается на вход струйного аппарата (СА) 1. В качестве рабочей жидкости в СА используется бензин, подаваемый с помощью насоса 4. В результате процесса эжектирования в струйном аппарате происходит сжатие паровоздушной смеси и абсорбция бензиновых паров рабочей жидкостью.",
-            "После СА газожидкостная смесь попадает в сепаратор 2, где происходит дальнейшая абсорбция паров бензина рабочей жидкостью и отделение воздуха. Окончательная доочистка воздуха от углеводородных паров происходит в абсорбере 5, в который в качестве абсорбента подается бензин, охлажденный в узле захолаживания 6. Очищенный от углеводородов воздух после абсорбера 5 выводится в атмосферу.",
-            "Из входящего в САУ парогазового потока извлекается до 99% углеводородов. Давление в абсорбере 5 поддерживается с помощью клапана-регулятора, установленного на линии вывода газа из САУ. Циркулирующая рабочая жидкость из сепаратора 2 подается на охлаждение в холодильник 3 (устанавливается в случае необходимости), после чего она поступает на прием насоса 4. Для обновления рабочей жидкости предусмотрена подпитка III свежим бензином. Избыток рабочей жидкости IV через клапан-регулятор уровня в сепараторе 2 отводится из установки на эстакаду налива либо в резервуарный парк."
+            "The pumped-out vapor-air mixture I from the gasoline loading rack is supplied to the inlet of the jet device 1. Gasoline is used as the working fluid for the jet device, which is supplied by pump 4. As a result of the ejection process in the jet device, the vapor-air mixture is compressed and gasoline vapor is absorbed by working fluid.",
+            "After the jet device the gas-liquid mixture enters separator 2, where gasoline vapors are further absorbed by the working fluid and air is separated. The final purification of the air from the hydrocarbon vapors occurs in the absorber 5, into which gasoline cooled in the chilling unit 6 is supplied as an absorbent. The purified air after absorber 5 is discharged into the atmosphere.",
+            "Up to 99% of hydrocarbons are extracted from the vapor-gas stream entering the JAU. The pressure in absorber 5 is maintained using a regulator valve installed on the gas outlet of the JAU. The circulating working fluid from separator 2 is supplied for cooling to heat exchanger 3 (installed if necessary), after which it is supplied to pump 4. To renew the working fluid, replenishment with fresh gasoline III is provided. Excess working fluid IV through the level control valve in separator 2 is removed from the unit to the loading rack or to the tank park"
           ]
         },
         {
-          "title": "Принцип работы САУ для рекуперации паров нефти",
+          "title": "Operating principle of the JAU for oil vapor recovery",
           "blocks": [
-            "Установка предназначена для улавливания легких фракций углеводородов из газов дыхания (абгазов), образующихся при наливе нефти в железнодорожные цистерны или танкеры.",
-            "Абгазы с эстакады 1 налива нефти по линии I при давлении Р0 поступают на вход струйного аппарата 2 и сжимаются до давления Р1. В качестве рабочей жидкости в 2 используется нефть, которая подается с помощью насоса 13. В ходе сжатия и смешения абгазов с нефтью протекает процесс абсорбции паров рабочей жидкостью.",
-            "После 2 образовавшаяся газожидкостная смесь попадает в сепаратор 5, где происходит разделение частично очищенных абгазов и нефти, которая затем из сепаратора поступает на вход насоса 8 и вновь попадает в 2.",
-            "Для поддержания эффективности процесса абсорбции и отвода тепла из контура циркуляции, в первую ступень сжатия по линии II подается порция свежей нефти, прокачиваемой из резервуаров 14 в цистерны 1 (или танкеры). Избыток нефти выводится из сепаратора 5 по линии III.",
-            "Аналогичным образом работает и вторая ступень сжатия, состоящая из жидкостно-газового струйного аппарата 3, сепаратора 6 и насоса 9. Во второй ступени давление абгазов поднимается до значения Р2, одновременно с этим повышается и степень очистки абгазов от паров нефти.",
-            "Финальная очистка протекает в третьей ступени, в которой давление уже поднимается до значения Р3. В жидкостном контуре третьей ступени сжатия в качестве рабочей жидкости используется дизельная фракция, которая подается насосом 10 в струйный аппарат 4. В ходе сжатия и смешения абгазов с дизельной фракцией происходит поглощение оставшихся в газе нефтяных паров.",
-            "С целью сохранения абсорбционной способности дизельная фракция регенерируется в десорбере 12. Насыщенная нефтяными парами дизельная фракция из сепаратора 7 при давлении Р3 поступает в десорбер 12, в котором поддерживается давление, близкое к давлению Р0 на входе в 2. Выделяющиеся при этом пары нефтяных фракций поступают на вход 2 и поглощаются в первых ступенях сжатия.",
-            "Отвод тепла, выделяющегося в третьей ступени, осуществляется с помощью воздушного или кожухотрубчатого теплообменника 11. При использовании кожухотрубчатого теплообменника в качестве охлаждающей жидкости может быть использована нефть, поступающая на эстакаду налива.",
-            "Значения степени очистки определяются на основании непрерывных измерений расходов абгазов и концентраций углеводородов в них на входе и выходе САУ и рассчитываются как отношение массы углеводородов, уловленных с помощью установки, к массе углеводородов, поступивших на её вход.",
-            "САУ обеспечивает высокую степень очистки абгазов (более 95%) от паров нефти с любым содержанием в них сернистых соединений (сероводорода, метилмеркаптанов и других)."
+            "Unit is designed for the light hydrocarbon fractions recovery from outlet gases (abgases), generated during oil loading into railway tanks or tankers.",
+
+            "Abgases from the oil loading rack 1 through line I at the pressure P0 are supplied to the inlet of the jet device 2 and compressed to the pressure P1. Oil that is supplied by pump 13 is used as the working fluid for jet device 2. During the compression and mixing of abgases with oil, the process of vapor absorption by the working fluid occurs.",
+
+            "After jet device 2 resulting gas-liquid mixture enters the separator 5, where separation of partially purified abgases and oil occurs. Then oil from the separator enters the inlet of pump 8 and after that is again supplied to the jet device 2.",
+
+            "To maintain efficiency of the absorption process and to remove heat from the circulation circuit, a portion of fresh oil is supplied to the first compression stage via line II. That oil is pumped from tanks 14 into railway tanks 1 (or tankers). Excess oil is removed from separator 5 via line III.",
+
+            "The second compression stage operates similarly, that consists of the gas-liquid jet device 3, the separator 6 and the pump 9. In the second stage abgases pressure rises to the value P2, and at the same time the degree of abgases purification from oil vapor increases.",
+
+            "The final purification takes place in the third stage, in which the pressure rises to the value P3. In the liquid circuit of the third compression stage, the diesel fraction is used as the working fluid, which is supplied by pump 10 to the jet device 4. During compression and mixing of abgases with the diesel fraction, the remaining oil vapors in the gas are absorbed.",
+
+            "In order to maintain absorption capacity, the diesel fraction is regenerated in desorber 12. The diesel fraction saturated with oil vapors from separator 7 at the pressure P3 enters desorber 12, in which pressure is maintained close to the value of pressure P0 at inlet of jet device 2. The oil vapors released in this case enter inlet of jet device 2 and are absorbed in the first compression stages.",
+
+            "The heat generated in the third stage is removed using an air-cooled or shell-and-tube heat exchanger 11. In case of of using a shell-and-tube heat exchanger, oil supplied to the loading rack can be used as a coolant.",
+
+            "The values of the purification degree are defined by continuous measurements of abgases flow rates and hydrocarbon concentrations in them at the inlet and outlet of the JAU and are calculated as the ratio of the mass of hydrocarbons captured using the unit to the mass of hydrocarbons received at its inlet.",
+
+            "The JAU provides a high purification degree of abgases (more than 95%) from oil vapors with any content of sulfur compounds (hydrogen sulfide, methyl mercaptans and others)."
           ]
         }
       ],
@@ -557,17 +567,17 @@
           "list": []
         }
       ],
-      "state_btn": ["", "Свернуть"]
+      "state_btn": ["", "Minimize"]
     }
   ],
   "common": {
     "summary": [
-      "Все аппараты выпускаются по техническому заданию Заказчика на необходимую производительность и давление откачки. Поэтому если Вас заинтересовала данная технология и Вы планируете применить её на Вашем предприятии, пожалуйста, ",
-      "свяжитесь с нами",
-      " или ",
-      "заполните опросный лист."
+      "All devices manufactured according to the Customer's technical specifications for the required pumping capacity and pressure. Therefore if you are interested in this technology and you plan to apply it at your enterprise, please ",
+      "contact us",
+      " or ",
+      "fill out the questionnaire."
     ],
-    "expand_btn": ["Подробнее", "Свернуть"],
-    "slider_btn": ["Показать предыдущую схему", "Показать следущую схему"]
+    "expand_btn": ["Learn more", "Minimize"],
+    "slider_btn": ["Show previous diagram", "Show next diagram"]
   }
 }
