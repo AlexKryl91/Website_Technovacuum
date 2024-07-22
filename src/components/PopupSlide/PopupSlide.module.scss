@@ -19,6 +19,10 @@
   align-items: center;
   justify-content: flex-start;
   row-gap: 40px;
+
+  &:focus {
+    background: teal;
+  }
 }
 
 @keyframes zooming {

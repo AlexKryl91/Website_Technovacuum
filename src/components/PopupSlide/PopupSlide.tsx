@@ -9,13 +9,16 @@ const PopupSlide = () => {
   const closeHandler = () => {
     setZoomedSlideProps(null);
   };
+  const escHandler = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    console.log(e.key === 'Escape');
+  };
 
   const props: TZoomedSlide = zoomedSlideProps;
 
   return (
     <>
       {props && (
-        <div className={classes.popup}>
+        <div onKeyUp={escHandler} className={classes.popup}>
           <h4 className={classes.caption}>{props.text.caption}</h4>
           <div className={classes.diagram} title={props.img_alt}>
             {props.img}
