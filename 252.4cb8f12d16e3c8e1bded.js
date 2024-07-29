@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite_technovacuum=self.webpackChunkwebsite_technovacuum||[]).push([[252],{252:(e,u,c)=>{c.r(u),c.d(u,{default:()=>n});var t=c(848);const n=function(){return(0,t.jsx)("div",{children:"ВНЕДРЕНИЯ"})}}}]);
