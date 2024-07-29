@@ -11,7 +11,9 @@ if (!root) {
 
 const container = createRoot(root);
 
-const router = createBrowserRouter(publicRoutes);
+const router = createBrowserRouter(publicRoutes, {
+  basename: process.env.publicPath,
+});
 
 container.render(
   <RouterProvider router={router} fallbackElement={<Loader />} />

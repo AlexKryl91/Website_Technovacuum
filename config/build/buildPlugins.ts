@@ -1,4 +1,4 @@
-import { Configuration, ProgressPlugin } from 'webpack';
+import { Configuration, ProgressPlugin, DefinePlugin } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
@@ -16,6 +16,9 @@ export function buildPlugins({
     new HtmlWebpackPlugin({
       template: paths.html,
       favicon: paths.favicon,
+    }),
+    new DefinePlugin({
+      'process.env.publicPath': JSON.stringify(paths.publicPath),
     }),
   ];
 

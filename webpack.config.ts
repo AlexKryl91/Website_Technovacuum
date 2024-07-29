@@ -7,6 +7,7 @@ interface EnvVariables {
   mode: BuildMode;
   port: number;
   analyzer?: boolean;
+  publicPath?: string;
 }
 
 export default (env: EnvVariables) => {
@@ -16,6 +17,7 @@ export default (env: EnvVariables) => {
     output: path.resolve(__dirname, 'dist'),
     src: path.resolve(__dirname, 'src'),
     favicon: path.resolve(__dirname, 'public', 'favicon.ico'),
+    publicPath: env.publicPath || '/',
   };
 
   const config: webpack.Configuration = buildWebpack({
