@@ -1,0 +1,7 @@
+.main {
+  width: 100%;
+  padding-top: var(--desktop-navbar-height);
+  position: relative;
+  overflow: hidden;
+  // @include top-section-photo-bg(url('@/assets/img/solutions_bg_1.jpg'));
+}

@@ -5,6 +5,7 @@ export interface BuildPaths {
   src: string;
   favicon: string;
   publicPath?: string;
+  public?: string;
 }
 
 export type BuildMode = 'production' | 'development';
