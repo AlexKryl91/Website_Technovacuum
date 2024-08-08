@@ -2,20 +2,30 @@
   width: 100dvw;
   height: 100dvh;
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
   z-index: 999;
-  background: var(--color-bg-default);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  row-gap: 50px;
+  row-gap: 60px;
+}
 
-  svg {
-    width: 150px;
-    height: 150px;
-  }
+.logo {
+  width: 150px;
+  height: 150px;
+  filter: drop-shadow(4px 4px 4px var(--color-tr40-black));
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+
+  height: 100dvh;
+  width: 150dvh;
 }
 
 .loader {
@@ -24,8 +34,8 @@
   border-radius: var(--border-radius-small);
   background: repeating-linear-gradient(
       -45deg,
-      var(--color-bg-white) 0 30px,
-      transparent 0 46px
+      var(--color-accent-3) 0 28px,
+      #0000 0 40px
     )
     left/200% 100%;
   animation: loading 2s infinite linear;
@@ -34,5 +44,12 @@
 @keyframes loading {
   100% {
     background-position: right;
+  }
+}
+
+@media screen and (min-width: 1380px) {
+  .background {
+    width: 100dvw;
+    height: 67dvw;
   }
 }

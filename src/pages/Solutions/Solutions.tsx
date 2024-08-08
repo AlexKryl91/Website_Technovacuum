@@ -1,34 +1,25 @@
 import * as classes from './Solutions.module.scss';
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { LangContext, SlideContext } from '@/context/context';
 import ruTextContent from './ru.json';
 import enTextContent from './en.json';
 
 import IconChevronDown from '@/assets/icons/chevron_down.svg';
-
 import IconVacuum from '@/assets/icons/icon_vacuum.svg';
 import IconPressure from '@/assets/icons/icon_pressure.svg';
 import IconAbsorb from '@/assets/icons/icon_absorb.svg';
 
-import IconVhcRU from '@/assets/icons/icon_vhc_ru.svg';
-import IconSteamRU from '@/assets/icons/icon_steam_ru.svg';
-import IconJcRU from '@/assets/icons/icon_jc_ru.svg';
-import IconJauRU from '@/assets/icons/icon_jau_ru.svg';
-
-import IconVhcEN from '@/assets/icons/icon_vhc_en.svg';
-import IconSteamEN from '@/assets/icons/icon_steam_en.svg';
-import IconJcEN from '@/assets/icons/icon_jc_en.svg';
-import IconJauEN from '@/assets/icons/icon_jau_en.svg';
+import i18lIcons from './Internationallcons';
 
 import Subpage from './Subpage';
-import { ISlide, TZoomedSlide } from '@/types/types';
+import { ISlide, TLangContext, TZoomedSlide } from '@/types/types';
 import allDiagrams from './DiagramsForSlides';
 import PopupSlide from '@/components/PopupSlide/PopupSlide';
 
 const Solutions = () => {
   const [zoomedSlideProps, setZoomedSlideProps] = useState<TZoomedSlide>(null);
 
-  const { lang } = useContext(LangContext);
+  const { lang } = useContext<TLangContext>(LangContext);
   const content = lang === 'en' ? enTextContent : ruTextContent;
 
   const { header, systems, units, common } = content;
@@ -38,16 +29,26 @@ const Solutions = () => {
     unit.slides.forEach((slide: ISlide, j) => (slide.img = allDiagrams[i][j]))
   );
 
-  const IconVHC = lang === 'en' ? IconVhcEN : IconVhcRU;
-  const IconSTEAM = lang === 'en' ? IconSteamEN : IconSteamRU;
-  const IconJC = lang === 'en' ? IconJcEN : IconJcRU;
-  const IconJAU = lang === 'en' ? IconJauEN : IconJauRU;
+  const { IconVHC, IconSTEAM, IconJC, IconJAU } = i18lIcons[lang];
 
   const [stateVCU, setStateVCU] = useState<boolean>(false);
   const [subpageStateVHC, setSubpagesStateVHC] = useState<boolean>(false);
   const [subpageStateSTEAM, setSubpagesStateSTEAM] = useState<boolean>(false);
   const [stateJC, setStateJC] = useState<boolean>(false);
   const [stateJAU, setStateJAU] = useState<boolean>(false);
+
+  useEffect(() => {
+    const closePopupHandler = (e: any) => {
+      if (e.key === 'Escape') {
+        setZoomedSlideProps(null);
+      }
+    };
+    document.addEventListener('keydown', closePopupHandler);
+
+    return () => {
+      document.removeEventListener('keydown', closePopupHandler);
+    };
+  }, []);
 
   const styleChevronVCU = classes.chevron.concat(
     stateVCU ? ` ${classes.open}` : ''

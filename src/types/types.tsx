@@ -1,6 +1,13 @@
 import { ReactNode } from 'react';
 // App state
 
+// Context Interface
+
+export type TLangContext = {
+  lang: 'en' | 'ru';
+  setLang: React.Dispatch<React.SetStateAction<string>>;
+};
+
 // Navbar Interface
 export type TLangButton = {
   name: 'en' | 'ru';

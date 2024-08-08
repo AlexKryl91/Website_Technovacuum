@@ -1,17 +1,26 @@
+import * as classes from './ErrorPage.module.scss';
+import BackgroundSVG from '@/assets/img/service_page_bg.svg';
 import { useRouteError } from 'react-router-dom';
 
 const ErrorPage = () => {
-  // решить проблему с any
+  // Solve the problem with "any"
   const error: any = useRouteError();
 
   return (
-    <div>
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p style={{ color: 'red', fontSize: '30px' }}>
-        {error.status == '404' ? '404 Page Not Found' : error.message}
-      </p>
-    </div>
+    <>
+      {error.status == '404' ? (
+        <div className={classes.container}>
+          <BackgroundSVG className={classes.background} />
+          <p className={classes['code-number']}>404</p>
+          <h1 className={classes['error-msg']}>Oops! Page not found</h1>
+          <p className={classes.text}>
+            Sorry, the page you're looking for doesn't exist.
+          </p>
+        </div>
+      ) : (
+        error.message
+      )}
+    </>
   );
 };
 

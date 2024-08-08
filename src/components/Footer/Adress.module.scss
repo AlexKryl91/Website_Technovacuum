@@ -24,6 +24,11 @@
 
   .email {
     color: var(--color-text-placeholder);
+    transition: all var(--transition-duration);
+
+    &:hover {
+      color: var(--color-text-light);
+    }
   }
 }
 

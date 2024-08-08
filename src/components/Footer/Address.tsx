@@ -12,21 +12,21 @@ const Address: FC<IAddress> = ({ organization, address, telephone, email }) => {
       <p>{organization}</p>
       <IconLocation />
       <p>
-        {address[0]}
-        <br />
-        {address[1]}
-        <br />
-        {address[2]}
-        <br />
-        {address[3]}
+        {address.map((item) => (
+          <span key={item}>
+            {item}
+            <br />
+          </span>
+        ))}
       </p>
       <IconTelephone />
       <p>
-        {telephone[0]}
-        <br />
-        {telephone[1]}
-        <br />
-        {telephone[2]}
+        {telephone.map((item) => (
+          <span key={item}>
+            {item}
+            <br />
+          </span>
+        ))}
       </p>
       <IconMail />
       <a href={`mailto: ${email}`} className={classes.email}>
