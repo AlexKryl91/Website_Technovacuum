@@ -1,8 +1,7 @@
 import { ReactNode } from 'react';
 // App state
 
-// Context Interface
-
+// Language Context Type
 export type TLangContext = {
   lang: 'en' | 'ru';
   setLang: React.Dispatch<React.SetStateAction<string>>;
@@ -95,6 +94,11 @@ export interface ICarousel {
 }
 
 export type TZoomedSlide = null | ISlide;
+
+export type TZoomedSlideContext = {
+  zoomedSlideProps: TZoomedSlide;
+  setZoomedSlideProps: React.Dispatch<React.SetStateAction<ISlide>>;
+};
 
 // Dynamic Subpages Interface
 type TOperation = {

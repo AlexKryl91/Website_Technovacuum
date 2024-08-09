@@ -6,6 +6,10 @@ import LoginItem from './LoginItem';
 import LangSwitcherItem from './LangSwitcherItem';
 
 const BurgerMenu: FC<IBurgerMenu> = ({ active, setActive, menu, login }) => {
+  const html = document.querySelector('html');
+  const styleHtml = classes['hide-scrollbar'];
+  active ? html.classList.add(styleHtml) : html.classList.remove(styleHtml);
+
   const style = classes.menu.concat(active ? ` ${classes.active}` : '');
 
   return (

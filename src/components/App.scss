@@ -5,6 +5,26 @@
 html {
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  // Track
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  // Handle
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-accent-1);
+    border-radius: var(--border-radius-small);
+  }
+
+  // Handle on hover
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-2);
+  }
 }
 
 body {
@@ -14,24 +34,4 @@ body {
   font-size: 16px;
   font-family: var(--font-family-base);
   color: var(--color-text-light);
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-// Track
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-// Handle
-::-webkit-scrollbar-thumb {
-  background: var(--color-accent-1);
-  border-radius: var(--border-radius-small);
-}
-
-// Handle on hover
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent-2);
 }
