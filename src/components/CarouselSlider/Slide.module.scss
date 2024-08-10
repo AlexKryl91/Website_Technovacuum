@@ -108,6 +108,14 @@
     .caption {
       font-size: 14px;
       line-height: 18px;
+      max-height: 40px;
+
+      display: -webkit-box;
+      margin-inline: auto;
+      -webkit-line-clamp: 2;
+      line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
   }
 

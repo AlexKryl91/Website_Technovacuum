@@ -11,8 +11,10 @@ const LangButtonMobile: FC<TLangButton> = ({ name }) => {
 
   const langSwitchHandler = () => {
     if (!active) {
-      setLang(lang === 'ru' ? 'en' : 'ru');
-      document.querySelector('html').lang = lang === 'ru' ? 'en' : 'ru';
+      const newLang = lang === 'ru' ? 'en' : 'ru';
+      setLang(newLang);
+      document.querySelector('html').lang = newLang;
+      sessionStorage.setItem('langData', JSON.stringify(newLang));
     }
   };
 

@@ -11,7 +11,11 @@ const App = () => {
   const countryRegex =
     /(ru|RU)|(az|AZ)|(am|AM)|(by|BY)|(kz|KZ)|(md|MD)|(tj|TJ)|(uz|UZ)|(tm|TM)|(ua|UA)/g;
 
-  const initLang = countryRegex.test(window.navigator.language) ? 'ru' : 'en';
+  let initLang = countryRegex.test(window.navigator.language) ? 'ru' : 'en';
+
+  if (sessionStorage.getItem('langData')) {
+    initLang = JSON.parse(sessionStorage.getItem('langData'));
+  }
 
   const [lang, setLang] = useState<string>(initLang);
   const isMobile = useIsMobile(window.innerWidth);

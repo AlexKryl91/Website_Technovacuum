@@ -663,17 +663,17 @@
   }
 
   .banner {
-    height: 720px;
+    height: 700px;
 
     &-body {
       padding: 90px var(--mobile-side-spacing) 0;
     }
 
     &-text {
-      padding-top: 100px;
+      padding-top: 80px;
       .tagline {
-        font-size: 20px;
-        line-height: 42px;
+        font-size: 19px;
+        line-height: 36px;
       }
 
       .h-line {
@@ -681,6 +681,7 @@
       }
 
       .description {
+        margin-top: 30px;
         font-size: 16px;
         line-height: 22px;
       }

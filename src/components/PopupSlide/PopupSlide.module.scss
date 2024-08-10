@@ -9,6 +9,7 @@
   z-index: 99;
   background: #fff;
   overflow-x: hidden;
+  overflow-y: scroll;
 
   scale: 0;
   opacity: 0;
@@ -114,8 +115,19 @@
     line-height: 20px;
   }
 
+  .diagram {
+    height: 200px;
+  }
+
   .text-content {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 16px;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .close-btn {
+    width: 28px;
+    height: 28px;
   }
 }

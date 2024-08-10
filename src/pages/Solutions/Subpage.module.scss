@@ -47,7 +47,7 @@
     margin: 0 auto 70px;
 
     .text {
-      text-align: justify;
+      text-align: left;
 
       &:first-child {
         margin-bottom: 50px;
@@ -82,7 +82,7 @@
 
         svg {
           min-width: 19px;
-          margin-top: 1px;
+          margin-top: 2px;
         }
       }
     }
@@ -152,11 +152,16 @@
 
 @media screen and (max-width: 568px) {
   .subpage {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 18px;
 
     &-header-wrapper,
     &-body {
       padding-inline: var(--mobile-side-spacing);
+    }
+
+    &-header-wrapper {
+      margin: 50px auto 30px;
     }
   }
 }
